@@ -1,0 +1,18 @@
+- Responder qué, por qué y como de un proyecto. El resultado de esta etapa debe de ser un objetivo de investigación claro
+- MVP minimal viable product, es lo _peor_ que se le puede entregar a la empresa.
+- Recolección de datos:
+	- data.gov
+	- opendatanetwork.com
+	- data.unicef.org
+- Preparación de datos (la mamada más horrible de todas)
+	- Limpieza
+	- Transformación
+		- Data aggregating
+		- Extrapolating
+		- Derived measures
+		- Reducing number of variables
+	- Combinación
+- Data exploration EDA
+	- Buscar criterios para detectar y manejar outliers
+- Data modeling
+- Presentación y automatización
