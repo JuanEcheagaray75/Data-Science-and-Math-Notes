@@ -1,4 +1,22 @@
-# Data Science process (Life-cycle) 
+# Data Science Process (Life-cycle) 
+
+---
+1. [[#Basic life-cycle|Basic life-cycle]]
+1. [[#CRISP-DM Cross-industry standard process for data mining|CRISP-DM Cross-industry standard process for data mining]]
+	1. [[#Business understanding|Business understanding]]
+	1. [[#Data understanding|Data understanding]]
+	1. [[#Data preparation|Data preparation]]
+	1. [[#Modeling|Modeling]]
+	1. [[#Evaluation|Evaluation]]
+	1. [[#Deployment|Deployment]]
+1. [[#KDD Knowledge discovery in databases|KDD Knowledge discovery in databases]]
+1. [[#SEMMA Sample, Explore, Modify, Model and Assess|SEMMA Sample, Explore, Modify, Model and Assess]]
+1. [[#Microsoft: The Team Data Science Process Life Cycle|Microsoft: The Team Data Science Process Life Cycle]]
+	1. [[#Business understanding|Business understanding]]
+	1. [[#Data acquisition and understanding|Data acquisition and understanding]]
+	1. [[#Modeling|Modeling]]
+	1. [[#Deployment|Deployment]]
+	1. [[#Customer acceptance|Customer acceptance]]
 
 ---
 
@@ -107,6 +125,8 @@ https://www.datascience-pm.com/semma/
 
 > This life cycle is designed for data-science projects that are intended to ship as part of intelligent applications.
 
+![[Pasted image 20220221233608.png]]
+
 ### Business understanding
 
 - Goals
@@ -147,9 +167,40 @@ https://www.datascience-pm.com/semma/
 
 ### Modeling
 
+- Goals
+	- Determine optimal data features
+	- Create an _informative_ ML model
+	- Create a ML model suitable for production
+- Tasks
+	- Feature engineering: inclusion, aggregation and transformation of raw variables to create new features to be used on the analysis, understand how the features relate to each other
+	- Model training: there are many modeling algorithms available, choose the one that performs the best
+		- Split the input data into _train_ and _test_ subsets
+		- Build the models using the _training_ set
+		- Evaluate the model. Do not stop with one iteration, try diverse ML models
+		- Determine the best model based on some type of performance metric
+	- Model evaluation
+		- Checkpoint decision: evaluate whether the model performs sufficiently well for deployment 
+		- Interpreting the model: explain the model behavior, enable interpretability techniques
+		- Assessing fairness: make sure that there is no bias in the data, and therefore bias in the model
+
 ### Deployment
 
+- Goal
+	- Deploy models with a data pipeline to a production environment for customer acceptance
+- Task
+	- Operationalize the model: operationalize them for other apps to consume, you may need real time predictions or on a batch basis
+- Deliverables
+	- Dashboard
+	- Modeling report
+	- Final solution architect
+
 ### Customer acceptance
+
+- Goal: finalize project deliverables. Make sure that the pipeline, the model and the deployment satisfy the customer's needs
+- Tasks
+	- System validation: confirm that the deployed model and pipeline satisfy the customer's needs
+	- Project hand-off
+- Deliverable: exit report
 
 For more in depth documentation, please visit https://docs.microsoft.com/en-us/azure/architecture/data-science-process/lifecycle
 

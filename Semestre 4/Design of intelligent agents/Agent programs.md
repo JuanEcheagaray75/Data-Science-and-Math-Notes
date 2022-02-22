@@ -95,4 +95,5 @@ In a sense, the performance standard distinguishes part of the incoming percept 
 ## Questions
 
 - Page 51-52, concept of internal state
-- Preguntarle al profe como es que se resuelven los ejercicios del final del capítulo 2, cuál es el procedimiento y cómo es que debería de ser presentado
+- Preguntarle al profe como es que se resuelven los ejercicios del final del capítulo 2, cuál es el procedimiento y cómo es que debería de ser presentado.
+	- En respuesta a esto, me dijo que básicamente se tiene qué resolver como si fuesen demostraciones matemáticas
