@@ -49,3 +49,8 @@ Applies to the state of the environment, to the way time is handled, and to the 
 
 ### Known vs unknown
 
+Refers to the agent's state of knowledge about the _laws of physics_ of the environment. In a **known** environment, the outcomes (or the probabilities for each possible outcome in stochastic environments) are given; on the contrary, if the environment is **unknown**, the agent will have to learn how the world works in order to make good decisions.
+
+#### Distinction between known and unknown vs partially and fully observable
+
+A known environment can be partially observable, a game of solitaire, and an unknown environment can be fully observable, an AI that learns how to play Flappy Bird https://www.youtube.com/watch?v=WSW-5m8lRMs
