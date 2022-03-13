@@ -1,6 +1,7 @@
 # Data Science Process (Life-cycle) 
 
 ---
+
 1. [[#Basic life-cycle|Basic life-cycle]]
 1. [[#CRISP-DM Cross-industry standard process for data mining|CRISP-DM Cross-industry standard process for data mining]]
 	1. [[#Business understanding|Business understanding]]

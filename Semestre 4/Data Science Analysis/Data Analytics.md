@@ -1,29 +1,47 @@
-# Analítica de datos
+# Data analytics
+---
 
-1. [[#Descriptiva|Descriptiva]]
-1. [[#Diagnóstica|Diagnóstica]]
-1. [[#Predictiva|Predictiva]]
-1. [[#Prescriptiva|Prescriptiva]]
-1. [[#Cognitiva|Cognitiva]]
+1. [[#Descriptive|Descriptive]]
+1. [[#Predictive|Predictive]]
+1. [[#Prescriptive|Prescriptive]]
+1. [[#Summary|Summary]]
 
-## Descriptiva
+---
+## Descriptive
 
-- Etapa preliminar del procesamiento de datos. En ella se crea un resumen de los datos históricos para proporcionar información útil y prepararlos para su futuro análisis.
-- Descripción de medidas de posición y dispersión
-- Medición de asociación entre variables
-- Cálculo de medidas simples de composición y distribución de variables
+- Preliminary stage of data processing. It creates an historical overview of the collected data, providing insights and preparing the data for its further analysis
+	- Check variable's distributions
+	- Measures of central tendency (mean, median, mode), dispersion (variance, standard deviation, quantiles, etc...)
+	- Measures of the inner relationships of the variables
 
-==Provides insides into past events==
+![[Pasted image 20220312164632.png]]
 
-## Diagnóstica
+---
+
+## Predictive
+
+- Use the available data to generate predictions of the underlying distributions (and patterns) of the data. The quality of said predictions relies heavily on the quality of the data analysis made and the quality of the data
+	- Pattern prediction
+	- Usage and training of different models (see ML Models [[Machine Learning]])
+
+![[Pasted image 20220312174406.png]]
 
 
+---
 
-## Predictiva
+## Prescriptive
 
-Consiste en la utilización de los datos para predecir patrones y tendencias de comportamiento
+Process of using data to determine an optimal course of action.
 
-## Prescriptiva
+- It summarizes data, business knowledge and ML model's predictions to suggest the best course of action.
+- Helps the decision makers see what would happen if an action was taken
 
-Sintetizar datos, reglas de negocio y aprendizaje automático para sugerir opciones de decisión y aprovechar las predicciones. Muestra las implicaciones de tomar cada opción de decisión
+![[Pasted image 20220312175144.png]]
 
+---
+
+## Summary
+
+![[Pasted image 20220312175406.png]]
+
+---

@@ -1,5 +1,16 @@
 # Task environments
 
+1. [[#The task environment|The task environment]]
+1. [[#Dimensions of the task environment|Dimensions of the task environment]]
+	1. [[#Fully observable vs partially observable|Fully observable vs partially observable]]
+	1. [[#Single agent vs multi-agent|Single agent vs multi-agent]]
+	1. [[#Deterministic vs stochastic|Deterministic vs stochastic]]
+	1. [[#Episodic vs sequential|Episodic vs sequential]]
+	1. [[#Static vs dynamic|Static vs dynamic]]
+	1. [[#Discrete vs continuous|Discrete vs continuous]]
+	1. [[#Known vs unknown|Known vs unknown]]
+		1. [[#Distinction between known and unknown vs partially and fully observable|Distinction between known and unknown vs partially and fully observable]]
+
 ## The task environment
 - Problems to which rational agents are the solutions
 - PEAS: Performance, Environment, Actuators and Sensors, Example:

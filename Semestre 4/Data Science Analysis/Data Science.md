@@ -1,2 +1,1 @@
-[[Data Science Process]]
-[[Types of databases]]
+[[Intro to DS]]

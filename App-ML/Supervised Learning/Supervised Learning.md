@@ -14,7 +14,7 @@
 - Multi-class classification (more than 2 classes)
 
 1. [[K-nearest neighbors CLF]]
-2. [[Logistic Regression]]
+2. [[App-ML/Supervised Learning/Logistic Regression]]
 3. [[LSVM]]
 4. [[Kernelized SVM]]
 
