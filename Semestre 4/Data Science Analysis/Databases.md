@@ -14,6 +14,7 @@
 		1. [[#Graph|Graph]]
 1. [[#API (Application Programming Interface)|API (Application Programming Interface)]]
 	1. [[#Types of APIs|Types of APIs]]
+	1. [[#API Protocols|API Protocols]]
 
 ---
 
@@ -124,6 +125,7 @@ It manages 2 types of information, _nodes_ and _edges_. Nodes represent entities
 Take this example, with a graph database it would be pretty straightforward to perform queries such as "Find all employees that report to Sarah"
 
 ---
+
 ## API (Application Programming Interface)
 
 Set of defined rules that explain how computers or applications communicate with each other. APIs sit between an application and the web server.
@@ -150,6 +152,22 @@ General procedure:
 	- Combination of multiple APIs
 	- Allow devs to access several endpoints through a single call
 	- Useful where performing a single task may require information from several sources
+
+### API Protocols
+
+- SOAP (Simple Object Access Protocol)
+	- Built with XML, enabling users to send and receive data through SMTP and HTTP
+	- It's easier to share information between apps or software components that are running in different environments or written in different languages (programming languages I guess)
+- XML-RPC
+	- Relies on a specific format of XML to transfer data
+	- Older than SOAP, but much simpler and relatively lightweight
+- JSON-RPC
+	- Similar to XML-RPC in that both are _remote procedural calls_, but this one uses the JSON format instead of the XML
+	- Simple, calls may contain multiple parameters, but just a single result is expected
+- REST (Representational State Transfer)
+	- Set of web API architecture principles
+	- To be considered one, the interface must adhere to certain architectural constraints
+	- It's sort of the competition of SOAP
 
 For more info on APIs see https://www.ibm.com/cloud/learn/api
 
