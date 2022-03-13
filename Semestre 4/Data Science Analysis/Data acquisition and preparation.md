@@ -1,4 +1,4 @@
 # Data acquisition and preparation
 
-[[Feature engineering]]
+[[Feature selection]]
 [[Sampling techniques]]
