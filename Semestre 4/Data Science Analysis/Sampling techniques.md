@@ -1,4 +1,18 @@
 # Sampling techniques
+
+1. [[#Probabilistic sampling|Probabilistic sampling]]
+	1. [[#Simple random (SRS)|Simple random (SRS)]]
+		1. [[#Example|Example]]
+	1. [[#Stratified|Stratified]]
+		1. [[#Example|Example]]
+	1. [[#Systematic|Systematic]]
+	1. [[#Clustering|Clustering]]
+1. [[#Non-probabilistic sampling|Non-probabilistic sampling]]
+	1. [[#Convenience|Convenience]]
+	1. [[#Consecutive|Consecutive]]
+	1. [[#Intentional|Intentional]]
+1. [[#Sampling error|Sampling error]]
+
 ---
 
 A **sample** is a subset of a population. It must be _unbiased_ and _representative_
@@ -100,6 +114,18 @@ sys_sample = systematic_sampling(df, 27)
 ---
 
 ### Clustering
+
+First divide the population into clusters (no need to make the clusters based on some characteristic). Then, a random sample is made of $n$ clusters. So, say you divide a population into 10 clusters, you would then randomly select 2 clusters from those 10. And then, your sample will be all the individuals on those 2 selected clusters.
+
+- In Python
+
+```python
+def cluster_sampling(df: pd.DataFrame, n: int) -> pd.DataFrame:
+	clusters = np.random.choice(np.arange(1, df.shape[0]), size=n, replace=False)
+	cluster_sample = df[df.isins(clusters)]
+	return cluster_sample
+```
+
 ---
 
 ## Non-probabilistic sampling
