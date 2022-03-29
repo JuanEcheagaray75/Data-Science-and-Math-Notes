@@ -122,7 +122,7 @@ The entire training set is broken up in $k$ equal parts. The first part is kept 
 
 $k$ usually stays between 3 and 5, but it can be expanded to higher values. Normally it's kept low because cross-validation is a computationally expensive task (you'll see when you implement it).
 
-The method used will regularly return a list of $k$ accuracy values, it's a common practice to then use the mean to leverage the mdoel performance.
+The method used will regularly return a list of $k$ accuracy values, it's a common practice to then use the mean to leverage the model performance.
 
 ##### Implementation
 
@@ -139,9 +139,9 @@ print(np.mean(cross_scores))
 
 Using $p$ observations as the _validation set_ (hold out set), the rest of the observations are used to train the model. This is then repeated in all possible ways to cut the original dataset on a validation set of $p$ observations and $N-p$ observations for the training set.
 
-#### leave One-out
+#### Leave One-out
 
-Variant of Leave P-out, the process is the same but $p=1$$. It's easy to see that this is even more computationally expensive, since the validation process will be repeated $N$ times.
+Variant of Leave P-out, the process is the same but $p=1$. It's easy to see that this is even more computationally expensive, since the validation process will be repeated $N$ times.
 
 #### Repeated random sub-sampling
 

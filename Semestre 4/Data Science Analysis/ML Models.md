@@ -1,5 +1,19 @@
 # Machine Learning Models
 
+1. [[#Regression|Regression]]
+	1. [[#Linear regression|Linear regression]]
+	1. [[#Non-linear regression|Non-linear regression]]
+1. [[#Classification|Classification]]
+	1. [[#Classification vs clustering|Classification vs clustering]]
+	1. [[#Logistic Regression|Logistic Regression]]
+	1. [[#K-nearest neighbors|K-nearest neighbors]]
+	1. [[#Decision Trees|Decision Trees]]
+	1. [[#Support Vector Machines|Support Vector Machines]]
+		1. [[#Linear SVM|Linear SVM]]
+		1. [[#Kernelized SVM|Kernelized SVM]]
+	1. [[#Neural Networks|Neural Networks]]
+		1. [[#Types of neural networks|Types of neural networks]]
+
 ## Regression
 
 In order to represent the relationship between a variable $y$ with another variable (or a set of variables) $x$ we use regression models.
@@ -35,11 +49,29 @@ $$y = f(X, \Theta) + \epsilon$$
 
 ### Logistic Regression
 
-
-
 ### K-nearest neighbors
 
+Refer back to [[K-nearest neighbors CLF]], those notes contain more information than what I saw on this course
+
 ### Decision Trees
+
+The main goal of this models is to segment the feature space into simple rectangular regions, which is convenient, since this allows us to do either regression or classification (I'll present classification, but regression is pretty similar).
+
+One of the advantages of decision trees is that they are easy to interpret (and visualize), since they produce simple rule decisions that divide the data.
+
+![[Pasted image 20220315133009.png]]
+
+Information trees find the best decision rules by calculating the **information gain**, given a certain feature, information gain is the expected reduction between the impurity of the parent node and the sum of the child node impurities---the lower the impurity of the child nodes, the larger the information gain. By the way, there are several measures of impurity such as the **Gini index** and **entropy**. (`sklearn` uses gini by default).
+
+When training a decision tree, the idea is to start with mixed classes and to continue partitioning until each node reaches its observations of purest class. At every stage, the variable with maximum information gain is chosen in a greedy fashion. Given this, decision trees can overfit the data if we do not limit their depth.
+
+
+Now we mention some of the advantages of decision trees:
+
+- As mentioned before, trees are very easy to explain to people. In fact, they are even easier to explain than linear regression.
+- Some people believe that decision trees more closely mirror human decision-making than do the regression and classification approaches seen in previous chapters.
+- Trees can be displayed graphically, and are easily interpreted even by a non-expert (especially if they are small).
+- Trees can easily handle qualitative predictors without the need to create dummy variables.
 
 ### Support Vector Machines
 
