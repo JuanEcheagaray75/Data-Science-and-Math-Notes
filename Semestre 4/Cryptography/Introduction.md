@@ -73,7 +73,3 @@ Every good cryptographic system must possess the following properties to be cons
 6. Given the circumstances in which it is to be used, the system must be easy to use and should not be stressful to use or require its users to know and comply with a long list of rules
 
 As I'm sure you can guess, most of these rules are outdated, all of them but the second axiom which is still critically important
-
-### Extra (just for the flex)
-
-¿Cómo explicar la separabilidad de un perceptrón haciendo uso de álgebra lineal?
