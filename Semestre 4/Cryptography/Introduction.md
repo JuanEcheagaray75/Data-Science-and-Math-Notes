@@ -1,6 +1,24 @@
 # Introduction
 
+---
+
+1. [[#Cryptography|Cryptography]]
+	1. [[#An old definition|An old definition]]
+	1. [[#Cryptography reborn|Cryptography reborn]]
+1. [[#Basics|Basics]]
+1. [[#Crypto-analysis|Crypto-analysis]]
+1. [[#Cryptology|Cryptology]]
+1. [[#Information|Information]]
+	1. [[#Types of information|Types of information]]
+1. [[#Cybersecurity|Cybersecurity]]
+1. [[#Metrics|Metrics]]
+1. [[#Properties|Properties]]
+1. [[#Perfect Secrecy|Perfect Secrecy]]
+1. [[#Kerckhoffs' principles|Kerckhoffs' principles]]
+
 ## Cryptography
+
+---
 
 ### An old definition
 
@@ -12,11 +30,15 @@
 
 ## Basics
 
+---
+
 - Plain-text: information before encryption (text, files, etc...)
 - Cipher-text: information that has been encrypted (text, files, etc...) through a specific algorithm. Unreadable for anyone, it needs to be decrypted to be readable
 - Key: sequence of characters and numbers that is used to encrypt or decrypt a message
 
 ## Crypto-analysis
+
+---
 
 - Brute Force: check every possible key until the ciphertext is decrypted
 - Ciphertext: the attacker has hold of several ciphertexts, but not the original plain-text
@@ -26,9 +48,13 @@
 
 ## Cryptology
 
+---
+
 > Branch of mathematics and engineering that studies the application of methods and techniques (both physical and mathematical) that permit the protection and validation of sensitive information through ciphering, authentication, integrity checking and masking through one or several algorithms using one or more keys in combination with extra data; while at the same time it enables the study and exploitation of the vulnerabilities of the cryptographic system with the goal of extracting _sensitive_ data through the keys.
 
 ## Information
+
+---
 
 > Set of readable data (text, files, messages, etc...) that is created through a representation language that must be protected from external threats during its transmission or storage, using cryptographic techniques among other tools
 
@@ -40,9 +66,13 @@
 
 ## Cybersecurity
 
+---
+
 > Branch of engineering that studies the protection of sensitive information in storage, processing and transmission systems through different tools, techniques, methods and processes used as countermeasures against attacks from un-authorized users or possible threats, where different people have roles of either direct access or awareness for their adequate usage
 
 ## Metrics
+
+---
 
 - Security level: amount of work required to break the encryption
 - Functionality: level of objectives met for the protection of the information when encryption is performed (e.g. confidentiality, integrity, availability)
@@ -51,6 +81,8 @@
 - Ease of implementation: refers to the complexity of the adaption of the cryptosystem to a specific environment (hardware and software)
 
 ## Properties
+
+---
 
 Every good cryptographic system must possess the following properties to be considered resilient to attacks
 
@@ -61,9 +93,13 @@ Every good cryptographic system must possess the following properties to be cons
 
 ## Perfect Secrecy
 
+---
+
 > A ciphertext maintains perfect secrecy if the attacker’s knowledge of the contents of the message is the same both before and after the adversary inspects the ciphertext, attacking it with unlimited resources. That is, the message gives the adversary precisely no information about the message contents.
 
 ## Kerckhoffs' principles
+
+---
 
 1. The system must be practically, if not mathematically, indecipherable
 2. It should not require secrecy, and it should not be a problem if it falls into enemy hands

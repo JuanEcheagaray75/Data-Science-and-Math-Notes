@@ -10,4 +10,3 @@
 	- System integrity: a system performs its intended function in an unimpaired manner.
 - **Availability**: 
 	- System works promptly and service is not denied to authorized users
-
