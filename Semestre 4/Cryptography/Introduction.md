@@ -2,19 +2,20 @@
 
 ---
 
-1. [[#Cryptography|Cryptography]]
-	1. [[#An old definition|An old definition]]
-	1. [[#Cryptography reborn|Cryptography reborn]]
-1. [[#Basics|Basics]]
-1. [[#Crypto-analysis|Crypto-analysis]]
-1. [[#Cryptology|Cryptology]]
-1. [[#Information|Information]]
-	1. [[#Types of information|Types of information]]
-1. [[#Cybersecurity|Cybersecurity]]
-1. [[#Metrics|Metrics]]
-1. [[#Properties|Properties]]
-1. [[#Perfect Secrecy|Perfect Secrecy]]
-1. [[#Kerckhoffs' principles|Kerckhoffs' principles]]
+- [Introduction](#introduction)
+  - [Cryptography](#cryptography)
+    - [An old definition](#an-old-definition)
+    - [Cryptography reborn](#cryptography-reborn)
+  - [Basics](#basics)
+  - [Crypto-analysis](#crypto-analysis)
+  - [Cryptology](#cryptology)
+  - [Information](#information)
+    - [Types of information](#types-of-information)
+  - [Cybersecurity](#cybersecurity)
+  - [Metrics](#metrics)
+  - [Properties](#properties)
+  - [Perfect Secrecy](#perfect-secrecy)
+  - [Kerckhoffs' principles](#kerckhoffs-principles)
 
 ## Cryptography
 
