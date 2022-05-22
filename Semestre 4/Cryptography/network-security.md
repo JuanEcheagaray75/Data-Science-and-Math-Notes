@@ -1,5 +1,17 @@
 # Network Security
 
+- [Network Security](#network-security)
+  - [OSI model (Open System Interconnection)](#osi-model-open-system-interconnection)
+    - [Layer Architecture](#layer-architecture)
+  - [Protocols](#protocols)
+    - [IP (Internet Protocol)](#ip-internet-protocol)
+      - [IPv4](#ipv4)
+      - [IPv6](#ipv6)
+    - [User Datagram Protocol](#user-datagram-protocol)
+    - [Transfer Control Protocol](#transfer-control-protocol)
+    - [Stream Control Transmission Protocol](#stream-control-transmission-protocol)
+  - [New commands](#new-commands)
+
 ## OSI model (Open System Interconnection)
 
 > A conceptual model that describes the universal standard of communication functions of a telecommunication system or computing system, without any regard to the system's underlying internal technology and specific protocol suites
@@ -25,10 +37,67 @@
    - PDU: Data
    - DNS, FTP, HTTP, HTTPS, etc...
 
-DHCP => Dynamic Host Control Protocol
-IETF => Internet Engineering Task Force2
+![OSI-Layer-architecture](img/2022-05-21-17-28-10.png)
 
-## TCP (Transfer Control Protocol)
+## Protocols
+
+### IP (Internet Protocol)
+
+> Network layer communications protocol in the internet protocol suite for relaying datagrams across network boundaries. Its routing function enables internetworking, and essentially establishes the internet. Said communication can be established through some unique ids, called IPv4 and IPv6.
+
+#### IPv4
+
+Made by 4 bytes (32 bits), where each of those holds a value between 0 and 255, and each of those is represented in decimal notation. Ex: 169.254.38.87
+
+For this format there exists 5 sub-classes, which determine into how many elements a network can be split.
+
+1. Class A: (0.0.0.0 - 127.255.255.255), $2^{7}$ networks and $2^{24}$ addresses per network
+2. Class B: (128.0.0.0 - 191.255.255.255), $2^{14}$ networks and $2^{16}$ addresses per network
+3. Class C: (192.0.0.1 - 223.255.255.255), $2^{21}$ networks and $2^{8}$ addresses per network
+4. Class D: (224.0.0.1 - 239.255.255.255), $X$ networks and $X$ addresses per network
+5. Class E: (240.0.0.0 - 255.255.255.255), $X$ networks and $X$ addresses per network
+
+Classes A, B and C are made to be assigned to local networks.
+
+> Why class C and D do not finish with a 0?
+
+#### IPv6
+
+Since there are only $2^{32}$ networks in IPv4, IPv6 was created, it can hold up to $2^{128}$ networks. It has 8 fields of 16 bits each, for a grand total of 128 bits. Each field of 16 bits is represented in hexadecimal notation. Example:
+
+$$
+    2001:4998:24:120d::1:1 \\
+    2001:4998:0024:120d:0000:0000:0001:0001
+$$
+
+It can be represented in 2 formats, long and short. See:
+
+$$\begin{gather*}
+    2001:4998:24:120d::1:1 \equiv 2001:4998:0024:120d:0000:0000:0001:0001
+\end{gather*}$$
+
+<!-- IETF => Internet Engineering Task Force
+DHCP => Dynamic Host Control Protocol -->
+
+### User Datagram Protocol
+
+A connectionless oriented protocol. Computer applications can send messages, in this case referred to as datagrams, to other hosts on an IP protocol network. It uses a simple connectionless communication model with a minimum of protocol mechanisms. UDP provides _checksums_ for data integrity, and port numbers for addressing different functions at the source and destination of the datagram. It has no handshaking dialogues, and thus exposes the user's program to the unreliability of the underlying network; there is no guarantee of delivery, ordering or duplicate protection. 
+
+> Prior communications are not required in order to setup communication channels or data paths.
+
+![UDP-diagram](img/2022-05-21-19-38-31.png)
+
+### Transfer Control Protocol
+
+A connection oriented protocol. TCP provides reliable, ordered and error checked delivery of a stream of bytes between applications running on hosts communicating via an IP network. A connection between client and server is established before data can be sent. The server must be listening (passive open) for connection requests from clients before a connection is established. Three-way handshake (active open), retransmission, and error detection adds to reliability but lengthens latency. Applications that do not require **reliable** _data stream_ may use the [User Datagram Protocol](#user-datagram-protocol).
+
+![general-diagram](img/2022-05-21-19-25-37.png)
+
+> Used to guarantee that all data is received and in order
+
+![overview-of-tcp](img/2022-05-21-19-24-54.png)
+
+### Stream Control Transmission Protocol
 
 ## New commands
 
