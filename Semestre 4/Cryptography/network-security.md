@@ -10,6 +10,7 @@
     - [User Datagram Protocol](#user-datagram-protocol)
     - [Transfer Control Protocol](#transfer-control-protocol)
     - [Stream Control Transmission Protocol](#stream-control-transmission-protocol)
+    - [Domain Name System](#domain-name-system)
   - [New commands](#new-commands)
 
 ## OSI model (Open System Interconnection)
@@ -98,6 +99,12 @@ A connection oriented protocol. TCP provides reliable, ordered and error checked
 ![overview-of-tcp](img/2022-05-21-19-24-54.png)
 
 ### Stream Control Transmission Protocol
+
+### Domain Name System
+
+The hierarchical and decentralized naming system used to identify computers reachable through the internet or other IP networks. The resource records contained in the DNS associate _domain names_ with other forms of information. In _lesser words_, it allows us to translate the website name (**Qualified Domain Name) to its IP address.
+
+> It serves as the phone book for the Internet by translating human-friendly computer hostnames into IP addresses.
 
 ## New commands
 
