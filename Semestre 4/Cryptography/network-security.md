@@ -11,6 +11,8 @@
     - [Transfer Control Protocol](#transfer-control-protocol)
     - [Stream Control Transmission Protocol](#stream-control-transmission-protocol)
     - [Domain Name System](#domain-name-system)
+  - [Ports](#ports)
+    - [Port Numbers](#port-numbers)
   - [New commands](#new-commands)
 
 ## OSI model (Open System Interconnection)
@@ -105,6 +107,27 @@ A connection oriented protocol. TCP provides reliable, ordered and error checked
 The hierarchical and decentralized naming system used to identify computers reachable through the internet or other IP networks. The resource records contained in the DNS associate _domain names_ with other forms of information. In _lesser words_, it allows us to translate the website name (**Qualified Domain Name) to its IP address.
 
 > It serves as the phone book for the Internet by translating human-friendly computer hostnames into IP addresses.
+
+## Ports
+
+A port is a virtual point where network connections start and end. Ports are software based and managed by a computer's operating system. Each port is associated with a specific process or service. Ports allow computers to easily differentiate between different kinds of traffic.
+
+Ports are standardized across all network-connected devices, with each port assigned a number. Most ports are reserved for certain protocols, for example, most HTTP messages go to port 80.
+
+### Port Numbers
+
+1. Ports 20 and 21: File Transfer Protocol (FTP), transferring files between a client and a server
+2. Port 22: Secure Shell. SSH is one of many tunneling protocols that create secure network connections
+3. Port 25: Simple Mail Transfer Protocol (SMTP), email
+4. Port 53: [Domain Name System](#domain-name-system) (DNS)
+5. Port 80: Hypertext Transfer Protocol (HTTP), web browser
+6. Port 123: Network Time Protocol (NTP), allows computer clocks to sync with each other, an essential process for **encryption**
+7. Port 179: Border Gateway Protocol (BGP), establishing efficient routes between the large networks that make up the Internet
+8. Port 443: HTTP Secure (HTTPS), web browser
+9. Port 500: Internet Security Association and Key Management Protocol (ISAKMP), to set-up secure IPsec connections
+10. Port 3389: Remote Desktop Protocol (RDP), enables user to remotely connect to their desktop computers from another device
+
+[More info](https://www.cloudflare.com/learning/network-layer/what-is-a-computer-port/)
 
 ## New commands
 
