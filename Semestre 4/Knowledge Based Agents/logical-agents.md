@@ -13,7 +13,7 @@ Each time the agent program is called it performs 3 actions:
 
 1. Tell the KB what it perceives
 2. Ask the KB what action it should perform
-	1. To answer this query, some extensive reasoning may occur, ex. understanding the current state of the world, what are the possible outcomes of the available action sequences
+   1. To answer this query, some extensive reasoning may occur, ex. understanding the current state of the world, what are the possible outcomes of the available action sequences
 3. Tell the KB which action it performed, and then perform said action
 
 The details of the representation language are encapsulated in 3 different functions:
@@ -23,7 +23,7 @@ The details of the representation language are encapsulated in 3 different funct
 3. MAKE-ACTION-SENTENCE: to construct a sentence that asserts the chosen action was executed
 
 | KB Agent |
-| ---- | 
+| ---- |
 | ![[Pasted image 20220517094550.png]] |
 
 > Need further study of knowledge level and implementation level
@@ -37,7 +37,7 @@ There are 2 approaches to building an agent's KB:
 
 > Note that in each case for which the agent draws a conclusion from the available information, that conclusion is _guaranteed_ to be correct if the available information is correct
 
-¿Qué es un Sistema Basado en 
+¿Qué es un Sistema Basado en
 ¿Qué componentes tiene un SBC?
 ¿Cuáles son las fuentes de conocimiento para un SBC?
 ¿Cuáles son los dominios de aplicación de SBCs?
