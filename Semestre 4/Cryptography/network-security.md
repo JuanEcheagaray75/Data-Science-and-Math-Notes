@@ -84,7 +84,7 @@ DHCP => Dynamic Host Control Protocol -->
 
 ### User Datagram Protocol
 
-A connectionless oriented protocol. Computer applications can send messages, in this case referred to as datagrams, to other hosts on an IP protocol network. It uses a simple connectionless communication model with a minimum of protocol mechanisms. UDP provides _checksums_ for data integrity, and port numbers for addressing different functions at the source and destination of the datagram. It has no handshaking dialogues, and thus exposes the user's program to the unreliability of the underlying network; there is no guarantee of delivery, ordering or duplicate protection. 
+A connectionless oriented protocol. Computer applications can send messages, in this case referred to as datagrams, to other hosts on an IP protocol network. It uses a simple connectionless communication model with a minimum of protocol mechanisms. UDP provides _checksums_ for data integrity, and port numbers for addressing different functions at the source and destination of the datagram. It has no handshaking dialogues, and thus exposes the user's program to the unreliability of the underlying network; there is no guarantee of delivery, ordering or duplicate protection.
 
 > Prior communications are not required in order to setup communication channels or data paths.
 
