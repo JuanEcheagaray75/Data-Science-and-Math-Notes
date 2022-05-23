@@ -1,2 +1,6 @@
-.obsidian
+# IDEs
+*.obsidian
 *.vscode
+
+# You don't need access to this directory
+/Life
