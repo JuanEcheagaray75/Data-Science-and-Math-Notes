@@ -10,7 +10,7 @@
 
 In human words: let both $a$ and $b$ be integers, (with $a \neq 0$), we say that $a$ divides $b$ if there is an _integer_ $c$ such that be can be expressed as the multiplication of $a$ and $c$
 
-##### Following proofs
+#### Following proofs
 
 > 1. if $a \mid b$ and $a \mid c$, then $a \mid (b+c)$
 
@@ -77,7 +77,6 @@ $$\begin{gather*}
 	a = 21, b = 2 \\
 	21 = 2 \cdot 10 + 1
 \end{gather*}$$
-
 
 ## Fermat's little theorem
 
