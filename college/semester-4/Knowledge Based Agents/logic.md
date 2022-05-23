@@ -5,9 +5,9 @@
 ### Propositional Logic
 
 1. Juan fue a la escuela y María fue a la escuela.
-   $$p: \text{Juan fue a la escuela} \\
-    q: \text{María fue a la escuela} \\
-    p \land q$$
+   $$p: \text{Juan fue a la escuela} $$\\
+   $$ q: \text{María fue a la escuela} $$ \\
+   $$p \land q$$
 2. No es el caso que me guste la mantequilla de cacahuate y la mermelada.
 3. No me gusta la mantequilla de cacahuate y no me gusta la mermelada.
    $$
