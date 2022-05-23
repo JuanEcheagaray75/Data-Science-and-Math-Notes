@@ -1,8 +1,0 @@
-- Cómo sacar mi certificación de inglés?
-	- Mandarle un correo a la maestra acerca de mi certificación
-- Cómo saber qué opciones tengo para irme de intercambio o hacer las estancias? Es demasiado tarde
-- Con quién puedo ir para prepararme para entrevistas, que me ayuden a pulir mi cv, etc...
-	- En general, hay alguien del tec con el que pueda hablar acerca de mi vida profesional, un poco más allá de lo académico
-	- Centro de vida y carrera
-- Video de concentraciones
-- Al menos 12 alumnos para solicitar un taller en específico
