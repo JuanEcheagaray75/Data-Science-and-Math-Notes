@@ -19,7 +19,12 @@
 6. Obtener una B en todos los exámenes es una condición suficiente para obtener una B en la clase.
 7. No es el caso de que Tomás y Ricardo trabajen hasta tarde o que Enrique llame para reportarse enfermo.
 8. Irán suministrará armas a Siria solo si Siria ayuda a Hezbollah.
-9. Julia necesita un paracaídas si y solo si planea saltar del avión.
+    $$
+    p: \text{Irán suministra armas a Siria} \\
+    q: \text{Siria ayuda a Hezbollah} \\
+    q \Rightarrow p
+    $$
+9.  Julia necesita un paracaídas si y solo si planea saltar del avión.
     $$
     p: \text{Julia necesita un paracaídas} \\
     q: \text{planea saltar del avión} \\
