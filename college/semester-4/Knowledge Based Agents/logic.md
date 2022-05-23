@@ -11,20 +11,49 @@
     p \land q
    $$
 2. No es el caso que me guste la mantequilla de cacahuate y la mermelada.
+   $$
+    p: \text{Me gusta la mantequilla de cacahuate} \\
+    q: \text{Me gusta la mermelada} \\
+    \neg (p \land q)
+
 3. No me gusta la mantequilla de cacahuate y no me gusta la mermelada.
    $$
+    p: \text{Me gusta la mantequilla de cacahuate} \\
+    q: \text{Me gusta la mermelada} \\
+    \neg p \land \neg q
    $$
 4. Si los impuestos suben, aumentará la inflación.
+    $$
+     p: \text{Los impuestos suben} \\
+     q: \text{Aumentará la inflación} \\
+     p \Rightarrow q
+    $$
 5. Obtener una A en el examen final es una condición necesaria para obtener una A en la clase.
+    $$
+    p: \text{Obtener una A en el final} \\
+    q: \text{Obtener una A en la clase} \\
+    p \Rightarrow q
+    $$
 6. Obtener una B en todos los exámenes es una condición suficiente para obtener una B en la clase.
+    $$
+    p: \text{Obtener una B en todos los exámenes} \\
+    q: \text{Obtener una B en la clase} \\
+    p \Leftrightarrow q
+    $$
 7. No es el caso de que Tomás y Ricardo trabajen hasta tarde o que Enrique llame para reportarse enfermo.
+    $$
+    p: \text{Tomás trabaja hasta tarde} \\
+    q: \text{Ricardo trabaja hasta tarde} \\
+    j: \text{Enrique llama para reportarse enfermo} \\
+    \neg (p \land q) \lor j
+    $$
 8. Irán suministrará armas a Siria solo si Siria ayuda a Hezbollah.
     $$
     p: \text{Irán suministra armas a Siria} \\
     q: \text{Siria ayuda a Hezbollah} \\
     q \Rightarrow p
     $$
-9.  Julia necesita un paracaídas si y solo si planea saltar del avión.
+9. Julia necesita un paracaídas si y solo si planea saltar del avión.
     $$
     p: \text{Julia necesita un paracaídas} \\
     q: \text{planea saltar del avión} \\
