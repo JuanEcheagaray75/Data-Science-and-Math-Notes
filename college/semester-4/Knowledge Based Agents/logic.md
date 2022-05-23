@@ -45,7 +45,7 @@
     p: \text{Tomás trabaja hasta tarde} \\
     q: \text{Ricardo trabaja hasta tarde} \\
     j: \text{Enrique llama para reportarse enfermo} \\
-    \neg (p \land q) \lor j
+    \neg (p \land q) \land j
     $$
 8. Irán suministrará armas a Siria solo si Siria ayuda a Hezbollah.
     $$
@@ -70,9 +70,21 @@
 ### Tarski's World
 
 1. Si a es un triángulo, entonces b también es un triángulo.
+   $$
+   \text{Triangle}(a) \Rightarrow \text{Triangle}(b)
+   $$
 2. c es un triángulo si b lo es.
+   $$
+   \text{Triangle}(b) \Rightarrow \text{Triangle}(c)
+   $$
 3. a y c son ambos triángulos solo si al menos uno de ellos es grande.
+   $$
+   \text{Triangle}(a) \land \text{Triangle}(c) \Leftrightarrow (\text{Big}(a) \lor \text{Big}(c))
+   $$
 4. a es un triángulo, pero c no es grande.
+   $$
+   \text{Triangle}(a) \land \neg \text{Big}(c)
+   $$
 5. Si c es pequeño y d es un pentágono, entonces d no es ni grande ni pequeño.
 6. c es mediano solo si ninguno de d, e y f son cuadrados.
 7. d es un pentágono pequeño a menos que a sea pequeño.
