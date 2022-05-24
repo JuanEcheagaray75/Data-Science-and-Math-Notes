@@ -1,6 +1,7 @@
 # IDEs
 *.obsidian
 *.vscode
+*.code-workspace
 
 # You don't need access to this directory
 /Life
