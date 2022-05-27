@@ -60,9 +60,9 @@ The previous algorithm is both sound and complete, it's sound because it directl
 
 1. Juan fue a la escuela y María fue a la escuela.
     $$p: \text{Juan fue a la escuela}$$
-    q: \text{María fue a la escuela} \\
-    p \land q
-    $$
+    $$q: \text{María fue a la escuela}$$
+    $$p \land q$$
+
 2. No es el caso que me guste la mantequilla de cacahuate y la mermelada.
     $$
     p: \text{Me gusta la mantequilla de cacahuate} \\
