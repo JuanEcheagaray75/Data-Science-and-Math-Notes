@@ -11,6 +11,22 @@ When in need of rigor, the term **model** is preferred over _possible world_. Po
 
 If a sentence $\alpha$ is true in model $m$, we say that $m$ satisfies $\alpha$, or sometimes, $m$ **is a model of** $\alpha$. To denote the set of all possible models of $\alpha$ we use the notation $M(\alpha)$.
 
+## Entailment
+
+> The idea that a sentence follows logically from another sentence
+
+In mathematical notation, to say that $\alpha$ entails $\beta$ we write:
+
+$$ a \models a $$
+
+The formal definition of entailment is: $a \models b$ if and only if, in every model in which $\alpha$ is true, $\beta$ is also true, in mathematical notation:
+
+$$ a \models b \Leftrightarrow M(a) \subseteq M(b) $$
+
+The definition of entailment can then be applied to carry out _logical inference_. **Model checking** makes reference to enumerating all possible worlds to check if $\alpha$ is true in all models in which the knowledge base is also true, in mathematical notation $M(KB) \subseteq M(A)$
+
+## Inference algorithm
+
 ## Examples
 
 ### Propositional Logic
