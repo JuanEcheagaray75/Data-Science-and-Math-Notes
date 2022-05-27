@@ -1,5 +1,19 @@
 # Propositional Logic
 
+- [Propositional Logic](#propositional-logic)
+  - [Examples](#examples)
+    - [Tarski's World](#tarskis-world)
+    - [For Tarski's World](#for-tarskis-world)
+
+The syntax of propositional logic defines the allowable sentences. **Atomic sentences** consist of a single **proposition symbol**, each of those symbols represents a proposition (sentence) that can either be true or false, to represent them we use upper case letters that hold some mnemonic value, think of them as the variable names you use when programming (I hope you have good practices).
+
+**Complex sentences** are then constructed as _atomic sentences_ connected through **logical connectives**. Below I list some of the most common connectives:
+
+1. $\neg$ (not): To negate a sentence, if $\alpha$ is true, $\neg \alpha$ is false.
+2. $\land$ (and, conjunction): Similar to the logical AND seen in electronics, if and only if $\alpha$ and $\beta$ are true, $\alpha \land \beta$ is true.
+3. $\lor$ (or, disjunction): Similar to the logical OR seen in electronics, if $\alpha$ or $\beta$ is true, $\alpha \lor \beta$ is true.
+4. $\Rightarrow$ (implication): A sentence such as $P \Rightarrow Q$ is called an **implication**, its premise (or antecedent) $P$ and conclusion (or consequent) $Q$. Think of them as `if-then` statements.
+5. $\Leftrightarrow$ (biconditional): A sentence such as $P \Leftrightarrow Q$ is called a **biconditional**, its premise (or antecedent) $P$ and conclusion (or consequent) $Q$.
 
 ## Examples
 
