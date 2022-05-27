@@ -1,5 +1,14 @@
 # Logic
 
+- [Logic](#logic)
+  - [Model](#model)
+  - [Entailment](#entailment)
+  - [Inference algorithm](#inference-algorithm)
+  - [Examples](#examples)
+    - [Propositional Logic](#propositional-logic)
+    - [Tarski's World](#tarskis-world)
+    - [For Tarski's World](#for-tarskis-world)
+
 > We develop logic as a general class of representations to support knowledge based agents
 
 - The _syntax_ of a language specifies all the sentences that are well formed
