@@ -37,8 +37,10 @@ There are 2 approaches to building an agent's KB:
 
 > Note that in each case for which the agent draws a conclusion from the available information, that conclusion is _guaranteed_ to be correct if the available information is correct
 
-¿Qué es un Sistema Basado en
-¿Qué componentes tiene un SBC?
-¿Cuáles son las fuentes de conocimiento para un SBC?
-¿Cuáles son los dominios de aplicación de SBCs?
-¿Cuáles son los retos en el diseños de un SBC?
+## Afterthoughts
+
+1. ¿Qué es un Sistema Basado en
+2. ¿Qué componentes tiene un SBC?
+3. ¿Cuáles son las fuentes de conocimiento para un SBC?
+4. ¿Cuáles son los dominios de aplicación de SBCs?
+5. ¿Cuáles son los retos en el diseños de un SBC?
