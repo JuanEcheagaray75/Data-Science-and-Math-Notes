@@ -41,11 +41,9 @@ The definition of entailment can then be applied to carry out _logical inference
 ### Propositional Logic
 
 1. Juan fue a la escuela y María fue a la escuela.
-    $$
-    p: \text{Juan fue a la escuela} \\
+    $$p: \text{Juan fue a la escuela} \\
     q: \text{María fue a la escuela} \\
-    p \land q
-    $$
+    p \land q$$
 2. No es el caso que me guste la mantequilla de cacahuate y la mermelada.
     $$
     p: \text{Me gusta la mantequilla de cacahuate} \\
