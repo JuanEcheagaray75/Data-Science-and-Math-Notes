@@ -1,5 +1,16 @@
 # Logic
 
+> We develop logic as a general class of representations to support knowledge based agents
+
+- The _syntax_ of a language specifies all the sentences that are well formed
+- The _semantics_ of a language defines the truth of each sentence with respect to each _possible world_
+
+## Model
+
+When in need of rigor, the term **model** is preferred over _possible world_. Possible worlds might be thought of as potentially real environments that an agent may or may not be in, on the other hand, **models** are mathematical abstractions that determine the truth or falsehood of _every_ relevant sentence.
+
+If a sentence $\alpha$ is true in model $m$, we say that $m$ satisfies $\alpha$, or sometimes, $m$ **is a model of** $\alpha$. To denote the set of all possible models of $\alpha$ we use the notation $M(\alpha)$.
+
 ## Examples
 
 ### Propositional Logic
