@@ -15,6 +15,15 @@ The syntax of propositional logic defines the allowable sentences. **Atomic sent
 4. $\Rightarrow$ (implication): A sentence such as $P \Rightarrow Q$ is called an **implication**, its premise (or antecedent) $P$ and conclusion (or consequent) $Q$. Think of them as `if-then` statements.
 5. $\Leftrightarrow$ (biconditional): A sentence such as $P \Leftrightarrow Q$ is called a **biconditional**, its premise (or antecedent) $P$ and conclusion (or consequent) $Q$.
 
+Here I present truth tables for the afore mentioned logical connectives:
+
+| P   | Q   | $\neg P$ | $P \land Q$ | $P \lor Q$ | $P \Rightarrow Q$ | $P \Leftrightarrow Q$ |
+| --- | --- | :------: | :---------: | :--------: | :---------------: | :-------------------: |
+| 0   | 0   |    1     |      0      |     0      |         1         |           1           |
+| 0   | 1   |    1     |      0      |     1      |         1         |           0           |
+| 1   | 0   |    0     |      0      |     1      |         0         |           0           |
+| 1   | 1   |    0     |      1      |     1      |         1         |           1           |
+
 ## Examples
 
 1. Juan fue a la escuela y María fue a la escuela.
