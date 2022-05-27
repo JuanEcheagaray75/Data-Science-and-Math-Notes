@@ -80,6 +80,8 @@ $$\begin{gather*}
 
 ## Fermat's little theorem
 
+To be written
+
 ## Binary modular exponentiation
 
 ## Extended Euclidean algorithm
