@@ -59,8 +59,7 @@ The previous algorithm is both sound and complete, it's sound because it directl
 ## Examples
 
 1. Juan fue a la escuela y María fue a la escuela.
-    $$
-    p: \text{Juan fue a la escuela} \\
+    $$p: \text{Juan fue a la escuela}$$
     q: \text{María fue a la escuela} \\
     p \land q
     $$
