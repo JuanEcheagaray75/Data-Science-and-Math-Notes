@@ -77,9 +77,9 @@
 
 - Security level: amount of work required to break the encryption
 - Functionality: level of objectives met for the protection of the information when encryption is performed (e.g. confidentiality, integrity, availability)
-- Operation method: refers to the way the cryptosystem is designed and implemented
+- Operation method: refers to the way the crypto-system is designed and implemented
 - Performance: relation between the quantity of encrypted information, speed of encryption and the physical resources needed
-- Ease of implementation: refers to the complexity of the adaption of the cryptosystem to a specific environment (hardware and software)
+- Ease of implementation: refers to the complexity of the adaption of the crypto-system to a specific environment (hardware and software)
 
 ## Properties
 
