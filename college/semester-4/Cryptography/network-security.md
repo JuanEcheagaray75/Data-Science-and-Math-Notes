@@ -106,7 +106,7 @@ A connection oriented protocol. TCP provides reliable, ordered and error checked
 
 The hierarchical and decentralized naming system used to identify computers reachable through the internet or other IP networks. The resource records contained in the DNS associate _domain names_ with other forms of information. In _lesser words_, it allows us to translate the website name (**Qualified Domain Name) to its IP address.
 
-> It serves as the phone book for the Internet by translating human-friendly computer hostnames into IP addresses.
+> It serves as the phone book for the Internet by translating human-friendly computer host names into IP addresses.
 
 ## Ports
 
