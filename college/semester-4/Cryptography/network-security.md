@@ -118,14 +118,15 @@ Ports are standardized across all network-connected devices, with each port assi
 
 1. Ports 20 and 21: File Transfer Protocol (FTP), transferring files between a client and a server
 2. Port 22: Secure Shell. SSH is one of many tunneling protocols that create secure network connections
-3. Port 25: Simple Mail Transfer Protocol (SMTP), email
-4. Port 53: [Domain Name System](#domain-name-system) (DNS)
-5. Port 80: Hypertext Transfer Protocol (HTTP), web browser
-6. Port 123: Network Time Protocol (NTP), allows computer clocks to sync with each other, an essential process for **encryption**
-7. Port 179: Border Gateway Protocol (BGP), establishing efficient routes between the large networks that make up the Internet
-8. Port 443: HTTP Secure (HTTPS), web browser
-9. Port 500: Internet Security Association and Key Management Protocol (ISAKMP), to set-up secure IPsec connections
-10. Port 3389: Remote Desktop Protocol (RDP), enables user to remotely connect to their desktop computers from another device
+3. Port 23: Telnet, a protocol for text-based user interfaces
+4. Port 25: Simple Mail Transfer Protocol (SMTP), email
+5. Port 53: [Domain Name System](#domain-name-system) (DNS)
+6. Port 80: Hypertext Transfer Protocol (HTTP), web browser
+7. Port 123: Network Time Protocol (NTP), allows computer clocks to sync with each other, an essential process for **encryption**
+8. Port 179: Border Gateway Protocol (BGP), establishing efficient routes between the large networks that make up the Internet
+9. Port 443: HTTP Secure (HTTPS), web browser
+10. Port 500: Internet Security Association and Key Management Protocol (ISAKMP), to set-up secure IPsec connections
+11. Port 3389: Remote Desktop Protocol (RDP), enables user to remotely connect to their desktop computers from another device
 
 [More info](https://www.cloudflare.com/learning/network-layer/what-is-a-computer-port/)
 
