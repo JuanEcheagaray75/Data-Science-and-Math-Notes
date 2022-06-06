@@ -12,9 +12,14 @@
   - [Common Vulnerability Score System](#common-vulnerability-score-system)
     - [Metrics](#metrics)
       - [Base](#base)
+        - [Exploitability](#exploitability)
+        - [Impact](#impact)
+        - [Scope](#scope)
       - [Temporal](#temporal)
+        - [Exploit Code Maturity (E)](#exploit-code-maturity-e)
+        - [Remediation Level (L)](#remediation-level-l)
+        - [Report Confidence (RC)](#report-confidence-rc)
     - [Environmental](#environmental)
-  - [Afterthoughts](#afterthoughts)
 
 ## Background
 
@@ -84,47 +89,89 @@ CNA Numeration Authorities (CNA) are organizations that identify and distribute 
 
 #### Base
 
-- Exploitability
-  - Attack Vector: Shows how a vulnerability may be exploited
-    - Local (L): Needs physical access to the vulnerable system or a local account
-    - Adjacent Network (A): needs access to the broadcast or collision domain of the vulnerable system
-    - Network (N): the vulnerable interface is working at layer 3 or above of the OSI Network stack, they are often referred to as remotely exploitable
-  - Attack (Access) complexity (AC): addresses how easy or difficult it is to exploit the discovered vulnerability
-    - High (H): specialized conditions exist, such as race condition with a narrow window
-    - Medium (M): there are additional requirements for the attack, such as a limit on the origin of the attack, or the system to be running with an un-common configuration
-    - Low (L): there are no special conditions for exploiting the vulnerability
-  - Privileges required: describes the level of privileges an attacker must possess before successfully exploiting the vulnerability
-    - High (H): requires privileges that provide significant control over the vulnerable component allowing access to component-wide settings and files
-    - Low (L): requires basic privileges that provide basic user capabilities that could normally affect only settings and files owned by the user
-    - None (N): does not require access to any settings or files of the vulnerable system
-  - User interaction: captures the requirement for a human user (other than the attacker) to participate in the successful compromise of the vulnerable component.
-    - Required (R): exploitation of this vulnerability requires a user to take some action before the vulnerability can be exploited
-    - None (N): the vulnerability can be exploited without the need of user interaction
-- Impact
-  - Confidentiality impact (C): refers to limiting information access and disclosure to only authorized users, as well as preventing access from non-authorized users.
-    - High (H): total loss of confidentiality, resulting in all resources within the impacted component being divulged to the attacker
-    - Low (L): some loss of confidentiality, access to some restricted information is obtained, but the attacker does not have control over what information is obtained
-    - None (N): no loss of confidentiality
-  - Integrity impact: refers to the trustworthiness and veracity of the information
-    - High (H): total loss of integrity, for example, the attacker is able to modify any/all files protected by the impacted component
-    - Low (L): modification of data is possible, but the attacker does not have control over the consequence of a modification, or the amount of modification is limited
-    - None (N): no loss of integrity
-  - Availability impact: refers to the accessibility of information resources
-    - High (H): total loss of availability, resulting in the attacker being able to fully deny access to resources in the impacted component
-    - Low (L): performance is reduced or there are interruptions in resource availability
-    - None (N): there is no impact to availability within the impacted component
-- Scope: captures whether a vulnerability in one vulnerable component impact resources in components beyond its security scope
-  - Unchanged (U): can only affect resources managed by the same security authority
-  - Changed (C): can affect resources beyond the security scope managed by the security authority of the vulnerable component
+##### Exploitability
+
+- Attack Vector: Shows how a vulnerability may be exploited
+  - Local (L): Needs physical access to the vulnerable system or a local account
+  - Adjacent Network (A): needs access to the broadcast or collision domain of the vulnerable system
+  - Network (N): the vulnerable interface is working at layer 3 or above of the OSI Network stack, they are often referred to as remotely exploitable
+- Attack (Access) complexity (AC): addresses how easy or difficult it is to exploit the discovered vulnerability
+  - High (H): specialized conditions exist, such as race condition with a narrow window
+  - Medium (M): there are additional requirements for the attack, such as a limit on the origin of the attack, or the system to be running with an un-common configuration
+  - Low (L): there are no special conditions for exploiting the vulnerability
+- Privileges required: describes the level of privileges an attacker must possess before successfully exploiting the vulnerability
+  - High (H): requires privileges that provide significant control over the vulnerable component allowing access to component-wide settings and files
+  - Low (L): requires basic privileges that provide basic user capabilities that could normally affect only settings and files owned by the user
+  - None (N): does not require access to any settings or files of the vulnerable system
+- User interaction: captures the requirement for a human user (other than the attacker) to participate in the successful compromise of the vulnerable component.
+  - Required (R): exploitation of this vulnerability requires a user to take some action before the vulnerability can be exploited
+  - None (N): the vulnerability can be exploited without the need of user interaction
+
+##### Impact
+
+- Confidentiality impact (C): refers to limiting information access and disclosure to only authorized users, as well as preventing access from non-authorized users.
+  - High (H): total loss of confidentiality, resulting in all resources within the impacted component being divulged to the attacker
+  - Low (L): some loss of confidentiality, access to some restricted information is obtained, but the attacker does not have control over what information is obtained
+  - None (N): no loss of confidentiality
+- Integrity impact: refers to the trustworthiness and veracity of the information
+  - High (H): total loss of integrity, for example, the attacker is able to modify any/all files protected by the impacted component
+  - Low (L): modification of data is possible, but the attacker does not have control over the consequence of a modification, or the amount of modification is limited
+  - None (N): no loss of integrity
+- Availability impact: refers to the accessibility of information resources
+  - High (H): total loss of availability, resulting in the attacker being able to fully deny access to resources in the impacted component
+  - Low (L): performance is reduced or there are interruptions in resource availability
+  - None (N): there is no impact to availability within the impacted component
+
+##### Scope
+
+> Captures whether a vulnerability in one vulnerable component impact resources in components beyond its security scope
+
+- Unchanged (U): can only affect resources managed by the same security authority
+- Changed (C): can affect resources beyond the security scope managed by the security authority of the vulnerable component
 
 #### Temporal
 
+##### Exploit Code Maturity (E)
+
+> measures the likelihood of the vulnerability being attacked, and is typically based on the current state of exploit techniques, exploit code availability, or active _in the wild_ exploitation.
+
+- Not defined (X): assigning this value indicates there is insufficient information to choose one of the other values
+- High (H): functional autonomous code exists, or no exploit is required and details are widely available
+- Functional (F): functional exploit code is available, the code works in most situations where the vulnerability exists
+- Proof-of-concept (P): proof-of-concept code is available, or an attack demonstration is not practical for most systems
+- Unproven (U): no exploit code is available, or an exploit is theoretical
+
+##### Remediation Level (L)
+
+> an important factor for prioritization, the typical vulnerability is unpatched when initially published
+
+- Not defined (X): there is insufficient information to assign any of the other values
+- Unavailable (U): there is either no solution available or it is impossible to apply
+- Workaround (W): there is an unofficial, non-vendor solution available
+- Temporary Fix (T): there is an official but _temporary_ fix
+- Official Fix (O): a complete vendor solution is available
+
+##### Report Confidence (RC)
+
+> the degree of confidence in the existence of the vulnerability and the credibility of the known technical details
+
+- Not defined (X): there is insufficient information to choose any of the other values
+- Confirmed (C): detailed report exists, or functional reproduction is possible
+- Reasonable (R): significant details are published, but researchers either do not have full confidence in the root cause, or do not have access to source code to fully confirm all of the interactions that may lead to the result
+- Unknown (U): there are reports of impacts that indicate a vulnerability is present, the reports indicate that the cause of vulnerability is unknown, or reports may differ on the cause or impacts of the vulnerability
+
 ### Environmental
 
+- Confidentiality requirement
+- Integrity requirement
+- Availability requirement
+- Modified attack vector
+- Modified attack complexity
+- Modified privileges required
+- Modified user interaction
+- Modified scope
+- Modified confidentiality
+- Modified integrity
+- Modified
+
 For more info please refer back to [this website](https://en.wikipedia.org/wiki/Common_Vulnerability_Scoring_System) or [this page](https://www.first.org/cvss/specification-document)
-
-
-## Afterthoughts
-
-- Hardware Security Module
-- Check BSA
