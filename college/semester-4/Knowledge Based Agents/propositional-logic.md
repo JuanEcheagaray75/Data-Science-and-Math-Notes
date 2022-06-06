@@ -4,6 +4,7 @@
   - [Syntax](#syntax)
   - [Standard logical equivalences](#standard-logical-equivalences)
   - [Inference procedure](#inference-procedure)
+  - [Inference and proofs](#inference-and-proofs)
   - [Examples](#examples)
     - [Tarski's World](#tarskis-world)
     - [For Tarski's World](#for-tarskis-world)
@@ -56,6 +57,76 @@ Now the goal is to decide whether $KB \models a$ for some $a$. The first devised
 
 The previous algorithm is both sound and complete, it's sound because it directly implements the definition of entailment, and it's complete since it works for any $KB$, it always terminates. Note however that this approach will fail to work with a large $KB$. If the knowledge base and $\alpha$ contain $n$ symbols, then the time complexity of the algorithm will be $O(2^n)$, space complexity would still be $O(n)$ since the enumeration follows a depth-first approach. Don't try and be smart, propositional entailment is proven to be co-NP-complete.
 
+## Inference and proofs
+
+Oraciones:
+$$\begin{gather*}
+    J: \text{Julio va al partido de futbol} \\
+    P: \text{Paco juega dominó toda la noche} \\
+    E_j: \text{Esposa de Julio se enoja} \\
+    E_p: \text{Esposa de Paco se enoja} \\
+    A: \text{Esposas van con la abogada}
+\end{gather*}$$
+
+Conjunto de oraciones proposicionales
+$$\{J \Rightarrow E_j, P \Rightarrow E_p, (E_j \lor E_p) \Rightarrow A, \neg A\}$$
+
+Prueba
+$$\begin{gather}
+    \{J \Rightarrow E_j, P \Rightarrow E_p, (E_j \lor E_p) \Rightarrow A, \neg A\} \stackrel{?}{\models} \neg J \land \neg P \\
+    \neg (E_j \lor E_p) \qquad \text{ModusTollens(3, 4)} \\
+    \neg E_j \land \neg E_p \qquad \text{DeMorgan(5)} \\
+    \neg E_k, \neg E_p \qquad \text{Simplificación(6)} \\
+    \neg J \qquad \text{ModusTollens(1, 7)} \\
+    \neg P \qquad \text{ModusTollens(1, 8)} \\
+    \neg J \land \neg P \qquad \text{Conjunción(9, 10)}
+\end{gather}$$
+
+Ejercicio 4
+$$\begin{gather*}
+    C: \text{Consumir carne} \\
+    P: \text{Consumir pescado} \\
+    L: \text{Consumir lácteos} \\
+    A: \text{Consumir de origen animal} \\
+    V_e: \text{Ser vegetariano} \\
+    V^{*}: \text{Ser vegano}
+\end{gather*}$$
+
+$$\begin{gather*}
+    V_e \Rightarrow (\neg C \land \neg P)\\
+    V^{*} \Rightarrow (\neg A \land \neg L)\\
+    C \Rightarrow A \\
+    P \Rightarrow A
+\end{gather*}$$
+
+$$\begin{gather*}
+    \neg V_e \lor (\neg C \land P) \\
+    \neg V^{*} \lor (\neg A \land L) \\
+    \neg C \lor A \\
+    \neg P \lor A
+\end{gather*}$$
+
+$$\neg (\neg V_e \lor (\neg C \land P)) \equiv (V_e \land C) \lor (V_e \land P)$$
+
+Cláusulas
+
+$$\begin{gather*}
+    V_e \land C\\
+    V_e \land P \\
+    \neg V^{*} \lor \neg A \\
+    \neg V^{*} \lor \neg L \\
+    \neg C \lor A \\
+    \neg P \lor A \\
+    V^{*}
+\end{gather*}$$
+
+Refutación
+
+$$\begin{gather*}
+    (V_e \land C) \land \neg V_e \equiv C \\
+    (\neg P \lor A) \land P \equiv (P \land \neg P) \lor (P \land A), P, A \\
+    (\neg V^{*} \land \neg A) \land A \equiv \neg V^{*} \land \neg A \land A \equiv V^{*} \land \emptyset \equiv \emptyset
+\end{gather*}$$
 ## Examples
 
 1. Juan fue a la escuela y María fue a la escuela.

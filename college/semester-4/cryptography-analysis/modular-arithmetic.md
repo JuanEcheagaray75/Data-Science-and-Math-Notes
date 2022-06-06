@@ -12,7 +12,7 @@ In human words: let both $a$ and $b$ be integers, (with $a \neq 0$), we say that
 
 #### Following proofs
 
-> 1. if $a \mid b$ and $a \mid c$, then $a \mid (b+c)$
+> if $a \mid b$ and $a \mid c$, then $a \mid (b+c)$
 
 $$\begin{gather*}
 	ak = b \\
@@ -22,7 +22,7 @@ $$\begin{gather*}
  	an = m \equiv a \mid m = a \mid (b + c)
 \end{gather*}$$
 
-> 2. if $a \mid b$ and $b \mid c$ then $a \mid c$
+> if $a \mid b$ and $b \mid c$ then $a \mid c$
 
 $$\begin{gather*}
  	a \mid b \equiv ak = b \\
@@ -33,7 +33,7 @@ $$\begin{gather*}
 
 We can conclude that $a$ divides $c$ since $kj$ is still a positive whole number.
 
-> 3. if $a \mid b$ and $b \mid a$, then $a = \pm \ b$
+> if $a \mid b$ and $b \mid a$, then $a = \pm \ b$
 
 $$\begin{gather*}
  	am = b \\
@@ -45,7 +45,7 @@ $$\begin{gather*}
  	a = \pm \ b
 \end{gather*}$$
 
-> 4. if $a \mid 1$, then $a = \pm \ 1$
+> if $a \mid 1$, then $a = \pm \ 1$
 
 $$\begin{gather*}
  	an = 1 \\
@@ -54,7 +54,7 @@ $$\begin{gather*}
  	a = \pm \ 1
 \end{gather*}$$
 
-> 5. if $b \mid g$ and $b \mid h$, then $b \mid (mg + nh)$ for arbitrary integers $m$ and $n$
+> if $b \mid g$ and $b \mid h$, then $b \mid (mg + nh)$ for arbitrary integers $m$ and $n$
 
 $$\begin{gather*}
  	b \mid g \equiv bj = g \\
