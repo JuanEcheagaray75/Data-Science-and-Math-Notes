@@ -17,6 +17,7 @@
     - [Process](#process)
     - [General rules of operation](#general-rules-of-operation)
   - [Zone Based Firewall](#zone-based-firewall)
+    - [Features](#features)
   - [Demilitarized Zones (DMZ)](#demilitarized-zones-dmz)
     - [Design rules](#design-rules)
     - [Actions](#actions)
@@ -144,7 +145,22 @@ General steps to work with a firewall:
 
 ## Zone Based Firewall
 
-The Zone Based Firewall is the most advanced integrated stateful firewall technology available on the market.
+It utilizes a zone configuration model. Instead of assigning ACLs, different zones are created and assigned to interfaces. The security policies are assigned to traffic between the zones. The zone-based firewall can also use CBAC commands concurrently on a router, but not concurrently on the router interfaces.
+
+A router is assigned to only one security zone, which can have one-to-one or many-to-one relationships. Interfaces that belong to the same zone can communicate with each other freely and the interfaces which are in different security zones cannot communicate with each other by default.
+
+A zone provides security by establishing security borders on the network. It defines the acceptable traffic that is allowed to cross between zones through the policy restrictions. Zone-based firewalls use a new configuration policy language called _Cisco Activity Language (CPL)_. (Of course this just applies for Cisco products).
+
+### Features
+
+- Does not depend on ACLs
+- Blocks by default unless specified otherwise
+- An established policy will affect any given traffic, so there is no need for multiple ACL rules or different inspect actions
+
+For the purposes of this course:
+
+- Interfaces located in the same zones can communicate without restrictions.
+- Otherwise, permission rules and connection inspection must be established, based on the origin of the traffic.
 
 ## Demilitarized Zones (DMZ)
 
