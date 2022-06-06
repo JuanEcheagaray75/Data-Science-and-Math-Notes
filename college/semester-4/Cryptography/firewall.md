@@ -18,7 +18,6 @@
     - [General rules of operation](#general-rules-of-operation)
   - [Zone Based Firewall](#zone-based-firewall)
   - [Demilitarized Zones (DMZ)](#demilitarized-zones-dmz)
-    - [Features](#features)
     - [Design rules](#design-rules)
     - [Actions](#actions)
     - [Actions and rules table](#actions-and-rules-table)
@@ -147,23 +146,43 @@ General steps to work with a firewall:
 
 The Zone Based Firewall is the most advanced integrated stateful firewall technology available on the market.
 
-
 ## Demilitarized Zones (DMZ)
 
 An isolated network found within the internal network of an organization. Only the resources and services that must be accessed through the internet are stored there. Here's an example:
 
-
 | ![Demilitarized Zone Example](img/dmz.png) |
-| --- |
-| **DMZ** |
+| :----------------------------------------: |
+|                  **DMZ**                   |
 
-### Features
+> Generally speaking the DMZ allows connections from both the internet and the local network of the organization, but the connections that go from the DMZ to the local network are not allowed.
+
+This design decision was taken due to servers being more prone to attacks, if a cyber-criminal were to ever compromise a server, it'll be much more complicated for him to access the organization's local network.
 
 ### Design rules
 
+1. Determine the zones to be configured
+2. Establish the policies between the zones
+3. Design the physical infrastructure
+4. Identify subsets within the zones and join the traffic requirements
+
 ### Actions
 
+One can perform each of the following actions in a DMZ:
+
+1. Inspect: to inspect a package
+2. Drop: similar to the previously mentioned deny
+3. Pass: similar to the previously mentioned permit, but no monitoring is done
+
 ### Actions and rules table
+
+|  Origin  | Destination | Action |
+| :------: | :---------: | :----: |
+| Internet |     DMZ     |  Pass  |
+| Internet |     LAN     |  Deny  |
+|   DMZ    |  Internet   |  Pass  |
+|   DMZ    |     LAN     |  Deny  |
+|   LAN    |     DMZ     |  Pass  |
+|   LAN    |  Internet   |  Pass  |
 
 ## Review
 
