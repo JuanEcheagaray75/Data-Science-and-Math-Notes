@@ -21,7 +21,7 @@ When computing we are not only looking for efficient algorithms, but also effici
 Any number in $\mathbf{Z}$ can be represented as:
 $$n = \sum_{i=0}^{n} n_i \cdot (2^{i})$$
 
-With the previous formula we get, for example, that ${509}_{10} = {111111101}_{2}$.
+With the previous formula we get, for example, that $509_{10} = 111111101_{2}$.
 
 In computing, the bit is the basic unit of information, it can be either 0 or 1. Some other representations are used, like hexadecimal (base 16), octal (base 8), etc...
 
