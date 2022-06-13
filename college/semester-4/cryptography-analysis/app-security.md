@@ -7,6 +7,7 @@
     - [OWASP Top 10 Proactive controls](#owasp-top-10-proactive-controls)
   - [Version control](#version-control)
   - [Fuzzing](#fuzzing)
+    - [Methods](#methods)
 
 ## DevSecOps
 
@@ -80,3 +81,13 @@ It helps developers to:
 In terms of security, version control systems further ease the process of auditing to track security issues. From a VCS it's easy to determine which versions were affected for then implementing the right patches.
 
 ## Fuzzing
+
+> Fuzzing or fuzz testing is an automated software testing technique that involves providing invalid, unexpected or random data as inputs to a computer program. The program is then monitored for exceptions such as crashing, failing built-in code assertions, or potential memory leaks.
+
+Typically, fuzzers are used to test programs that take structured inputs. The structure is specified, e.g. in a file format or protocol and distinguishes valid from invalid input. An effective fuzzer generates semi-valid inputs that they are valid enough in that they are not immediately rejected by the parser, but do create unexpected behaviors deeper in the program and are invalid enough to expose corner cases that have not been properly dealt with.
+
+### Methods
+
+- Black box: in the literal sense, the system is treated as a black box to which we feed some inputs and produces some outputs (usually the expected ones)
+- White box: one has access to the system's source code to see which part might generate certain anomalies with a given input
+- Grey box: does not have access to the source code, but may rely on debugging or reverse engineering
