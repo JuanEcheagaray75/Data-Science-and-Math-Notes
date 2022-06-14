@@ -49,8 +49,8 @@
 
 ### Types of information
 
-- Non-sensitive: its knowledge does not compromise the integrity of a system or the original user
-- Sensitive: its knowledge compromises the integrity of a system or the original user or a third party.
+- **Non-sensitive**: its knowledge does not compromise the integrity of a system or the original user
+- **Sensitive**: its knowledge compromises the integrity of a system or the original user or a third party.
   - In general, this type of information is just meant for the sender and the receiver
 
 ## Cybersecurity
@@ -69,9 +69,9 @@
 
 Every good cryptographic system must possess the following properties to be considered resilient to attacks
 
-- Confusion: to hide the relationship between the ciphertext and the key
+- **Confusion**: to hide the relationship between the ciphertext and the key
   - At a lower level, it means that each binary digit of the ciphertext should depend on several parts of the key
-- Diffusion: to hide the statistical relationship between the ciphertext and the plain-text
+- **Diffusion**: to hide the statistical relationship between the ciphertext and the plain-text
   - If we change a single bit of the plain-text, then around half of the bits in the ciphertext should change, and viceversa.
 
 ## Perfect Secrecy
