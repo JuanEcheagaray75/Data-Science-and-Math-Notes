@@ -15,3 +15,5 @@
   - [AAA Standard](aaa-security.md)
 - Application security:
   - [Malicious Code](malicious-code.md)
+  - [App-Security](app-security.md)
+  - [OS Security](os-security.md)
