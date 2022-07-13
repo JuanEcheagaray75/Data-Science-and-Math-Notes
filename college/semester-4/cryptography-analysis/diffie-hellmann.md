@@ -21,8 +21,8 @@ $$y = g^b \bmod n$$
 Having each received the number, now they both calculate the shared secret:
 
 $$\begin{gather*}
-    k_A = y^a \bmod n
-    k_B = x^b \bmod n
+    k_A = y^a \bmod n \\
+    k_B = x^b \bmod n \\
     k_A = k_B
 \end{gather*}$$
 
