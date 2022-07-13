@@ -11,6 +11,9 @@
     - [802.11ac](#80211ac)
     - [802.11i](#80211i)
     - [Summary](#summary)
+  - [WiFi Security](#wifi-security)
+    - [Passive attacks](#passive-attacks)
+    - [Active attacks](#active-attacks)
   - [WEP Protocol](#wep-protocol)
   - [WPA Protocol](#wpa-protocol)
   - [Setting up a router](#setting-up-a-router)
@@ -78,8 +81,33 @@ Backwards compatible with 802.11n, not formally included with all the afore ment
 |     WiFi 4     | 802.11n  |
 |     WiFi 5     | 802.11ac |
 
+## WiFi Security
+
+We are looking to provide:
+
+1. Authentication
+2. Confidentiality
+3. Availability
+4. Integrity
+
+### Passive attacks
+
+- Eavesdropping: where the network's traffic is being monitored
+- Traffic Analysis: with bad intents
+
+### Active attacks
+
+- Masquerading: to access the network without proper authorization
+- Replay: where a transmission is intercepted and is then retransmitted from another device, effectively supplanting the original sender
+- Message modification: where a message can be deleted, altered, reordered or modified
+- Denial of Service (DoS): where access to a network is limited or denied to a legitimate user, the classical, _I can't connect to the WiFi_ or _The Wi-Fi is slow_
+
 ## WEP Protocol
 
+Wired Equivaled Privacy, or WEP, this protocol represents a typical schema of _Challenge and Response_, in other words, we trust the user to have the secret key to authenticate himself.
+
 ## WPA Protocol
+
+
 
 ## Setting up a router
