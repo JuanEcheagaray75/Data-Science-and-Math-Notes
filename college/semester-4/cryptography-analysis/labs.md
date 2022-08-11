@@ -1,12 +1,14 @@
-# Lab 1: Firefox: Logins and passwords
+# Labs
+
+## Lab 1: Firefox: Logins and passwords
 
 For more details please consult the [Firefox: Logins and Passwords](https://attackdefense.com/challengedetails?cid=166) challenge.
 
-> n this forensics exercise,  Firefox is installed on the system and all required tools are present on the system. The exercise is supposed to be done manually using first principles of analyzing Firefox preference data. 
+> n this forensics exercise,  Firefox is installed on the system and all required tools are present on the system. The exercise is supposed to be done manually using first principles of analyzing Firefox preference data.
 
 > You have to find the answers to the following questions:
 
-## Logins and Passwords
+### Logins and Passwords
 
 - What is the encrypted username for aliexpress.com ?
 
@@ -53,7 +55,7 @@ To get this information run the following commands:
 cd ../
 vi profiles.ini
 # Delete the last entry in the file
-cd ~tools/firefox_decrypt/
+cd ~/tools/firefox_decrypt/
 ls -la
 vi brute.sh
 #! /bin/bash
@@ -88,3 +90,5 @@ Analyze the previous output for the email ID.
 Analyze the previous output for the password.
 
 **Response**: test@password@1234#
+
+### Live Cracking: WPA-PSK
