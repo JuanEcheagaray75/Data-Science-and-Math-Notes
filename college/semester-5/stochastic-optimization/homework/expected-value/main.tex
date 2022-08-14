@@ -1,0 +1,206 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[]{amsthm}
+\usepackage{amsmath}
+\usepackage[]{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage[letterpaper, margin=1.5in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\decimalpoint
+
+\begin{document}
+    \begin{titlepage}
+        \begin{center}
+            \begin{figure}
+                \centering
+                \includegraphics[scale=0.13]{logo_itesm.png}\\ % Logo de la institución
+            \end{figure}
+        \vspace{5cm}
+        \LARGE{Instituto Tecnológico y de Estudios Superiores de Monterrey}\\
+        \fontsize{12}{14}\selectfont
+        \vspace{1cm}
+        \textbf{MA2004. Valor Esperado}\\ % Nombre de la tarea
+        \vspace{0.7cm}
+        \begin{table}[h!]
+            \centering
+            \begin{tabular}{ ||c|c|| }
+                \hline
+                Nombre & Matrícula \\
+                \hline
+                Juan Pablo Echeagaray González & A00830646 \\
+                \hline
+                Verónica Victoria García De la Fuente & A00830383 \\
+                \hline
+                Emily Rebeca Méndez Cruz & A00830768 \\
+                \hline
+                Eugenio Santiesteban Zolezzi & A01720932 \\
+                \hline
+                Daniel de Zamacona Madero & A01570576 \\
+                \hline
+            \end{tabular}
+        \end{table}
+        \vspace{0.7cm}
+        Optimización estocástica\\ % Materia
+        \vspace{0.2cm}
+        MA2004B\\ % Clave de la materia
+        \vspace{0.2cm}
+        Fernando Elizalde Ramírez\\ % Nombre del profesor
+        \vspace{0.7cm}
+        12 de agosto del 2022\\ % Fecha de entrega
+        \end{center}
+    \end{titlepage}
+
+    \section{Problema 1}
+
+        María Rojas está considerando la posibilidad de abrir una pequeña tienda de vestidos en Fairbanks Avenue,  a pocas cuadras de la universidad. Ha localizado un buen centro comercial que atrae a estudiantes. Sus opciones son abrir una tienda pequeña, una tienda mediana o no abrirla en absoluto. El mercado para una tienda de vestidos puede ser bueno, regular o malo. Las probabilidades de estas tres posibilidades son 0.2 para un mercado bueno, 0.5 para un mercado regular y 0.3 para un mercado malo. La ganancia o pérdida neta para las tiendas mediana y pequeña en las diferentes condiciones del mercado se dan en la siguiente tabla. No abrir una tienda no tiene pérdida ni ganancia.
+
+        \begin{figure}[!htbp]
+            \centering
+            \begin{tabular}{ |cccc| }
+                \hline
+                Alternativa & Mercado Bueno & Mercado Regular & Mercado Malo \\
+                \hline
+                Tienda Pequeña & $75,000$ & $25,000$ & $-40,000$ \\
+                \hline
+                Tienda Mediana & $100,000$ & $35,000$ & $-60,000$ \\
+                \hline
+                Tienda Grande & $0$ & $0$ & $0$ \\
+                \hline
+            \end{tabular}
+            \caption{Tabla de alternativas: Problema 1}
+            \label{tabla:problema1}
+        \end{figure}
+
+        \begin{enumerate}
+            \item ¿Qué recomienda a María?
+            \item Calcule el VEIP.
+            \item Desarrolle la tabla de pérdida de oportunidad para esta situación. ¿Qué decisión se tomarán usando  el criterio de POE mínima?
+        \end{enumerate}
+
+        \subsection{Procedimiento}
+
+            Calculamos primero los valores esperados asociados con las alternativas:
+
+            \begin{gather*}
+                VE_p = 75,000 \cdot 0.2 + 25,000 \cdot 0.5 + -40,000 \cdot 0.3 = \$ 15,500 \\
+                VE_m = 100,000 \cdot 0.2 + 35,000 \cdot 0.5 + (-60,000) \cdot 0.3 = \$ 19,500 \\
+                VE_g = 0 \cdot 0.2 + 0 \cdot 0.5 + 0 \cdot 0.3 = \$ 0 \\
+                \max_i \{VE_i\} = VE_m = \$ 19,500
+            \end{gather*}
+
+            Ahora obtenemos el valor esperado con información perfecta:
+
+            \begin{gather*}
+                VECIP = 100,000 \cdot 0.2 + 35,000 \cdot 0.5 + 0 \cdot 0.3 = \$ 37,500 \\
+                VEIP = VECIP - \max_i \{VE_i\} \\
+                VEIP = \$ 37,500 - \$ 19,500 = \$ 18,000
+            \end{gather*}
+
+            Y finalmente calculamos una tabla de pérdidas de oportunidad esperadas:
+
+            \begin{figure}[htbp!]
+                \centering
+                \begin{tabular}{ |cccc| }
+                    \hline
+                    Tienda / Mercado & $M_b$ & $M_r$ & $M_m$ \\
+                    \hline
+                    Tienda Pequeña & 25,000 & 10,000 & 40,000 \\
+                    \hline
+                    Tienda Mediana & 0 & 0 & 60000 \\
+                    \hline
+                    No tienda & 100,000 & 35,000 & 0 \\
+                    \hline
+                    $p$ & 0.2 & 0.5 & 0.3 \\
+                    \hline
+                \end{tabular}
+                \caption{Tabla de pérdidas de oportunidad esperadas: Problema 1}
+                \label{tabla:poe1}
+            \end{figure}
+
+            Con la tabla anterior ahora calculamos las pérdidas de oportunidad esperadas para cada una de las alternativas.
+
+            \begin{gather*}
+                POE_p = 0.2 \cdot (25,000) + 0.5 \cdot (10,000) + 0.3 \cdot (40,000) = \$ 22,000 \\
+                POE_m = 0.2 \cdot (0) + 0.5 \cdot (0) + 0.3 \cdot (60,000) = \$18,000 \\
+                POE_n = 0.2 \cdot (100,000) + 0.5 \cdot (35,000) + 0.3 \cdot (0) = \$37,500 \\
+                \min_i \{POE_i\} = POE_m = \$18,000
+            \end{gather*}
+
+        Ya que tenemos toda esta información, podemos recomendarle un plan de acción a María. Bajo el criterio del valor esperado, la mejor opción es La tienda mediana es la que tiene el valor esperado más alto de \$19,500. En caso de que quisiéramos más información, podríamos realizar un estudio, pero este no podría superar un costo mayor de \$18,000.
+
+        Si en cambio usáramos el criterio de pérdida de oportunidad de espera mínima, la mejor opción seguirá siendo la tienda mediana, con esta podríamos esperar perder solamente \$18,000.
+
+    \section{Problema 2}
+
+        Se le presenta la oportunidad de invertir en tres fondos mutuos: de servicios, de crecimiento agresivo, y global. El valor de su inversión cambiará según las condiciones del mercado. Hay 10\% de probabilidades de que el mercado baje; 50\% de que permanezca moderado, y 40\% de que funcione bien. La siguiente tabla proporciona el cambio porcentual del valor de la inversión en las tres condiciones:
+
+        \begin{figure}[!htbp]
+            \centering
+            \begin{tabular}{ |cccc| }
+                \hline
+                Alternativa & Mercado bajista (\%) & Mercado Regular (\%) & Mercado Malo (\%) \\
+                \hline
+                Servicios & 5 & 7 & 8 \\
+                \hline
+                Crecimiento agresivo & -10 & 5 & 30 \\
+                \hline
+                Global & 2 & 7 & 20 \\
+                \hline
+            \end{tabular}
+            \caption{Tabla de alternativas: Problema 2}
+            \label{tabla:problema2}
+        \end{figure}
+
+        \begin{enumerate} 
+            \item ¿Cuál fondo mutuo debe seleccionar?
+            \item Calcule el VEIP.
+            \item Desarrolle la tabla de pérdida de oportunidad para esta situación. ¿Qué decisión se tomarán usando  el criterio de POE mínima?
+        \end{enumerate}
+
+        \subsection{Procedimiento}
+
+            Calculamos primero los valores esperados asociados con las alternativas:
+            \begin{gather*}
+                VE_s = 0.1 \cdot (5) + 0.5 \cdot (7) + 0.4 \cdot (8) = 7.2\% \\
+                VE_a = 0.1 \cdot (-10) + 0.5 \cdot (5) + 0.4 \cdot (30) = 13.5\% \\
+                VE_g = 0.1 \cdot (2) + 0.5 \cdot (7) + 0.4 \cdot (20) = 11.7\% \\
+                \max_i \{VE_i\} = VE_a = 13.5\%
+            \end{gather*}
+
+            \begin{gather*}
+                VECIP = 0.1 \cdot (0.5) + 0.5 \cdot (7) + 0.4 \cdot (30) = 16\% \\
+                VEIP = VECIP - \max_i \{VE_i\} \\
+                VEIP = 16\% - 13.5\% = 2.5\%
+            \end{gather*}
+
+            \begin{figure}[htbp!]
+                \centering
+                \begin{tabular}{ |cccc| }
+                    \hline
+                    Alternativa / Mercado & $M_b$ & $M_m$ & $M_a$ \\
+                    \hline
+                    S & 0 & 0 & 22 \\
+                    \hline
+                    A & 15 & 2 & 0 \\
+                    \hline
+                    G & 3 & 0 & 10 \\
+                    \hline
+                    $p$ & 0.1 & 0.5 & 0.4 \\
+                    \hline
+                \end{tabular}
+                \caption{Tabla de pérdidas de oportunidad esperadas: Problema 1}
+                \label{tabla:poe2}
+            \end{figure}
+
+            \begin{gather*}
+                POE_s = 0.1 \cdot (0) + 0.5 \cdot (0) + 0.4 \cdot (22) = 8.8 \% \\
+                POE_a = 0.1 \cdot (15) + 0.2 \cdot (0.2) + 0.4 \cdot (0) = 2.5 \% \\
+                POE_g = 0.1 \cdot (3) + 0.5 \cdot (0) + 0.4 \cdot (10) = 4.3 \% \\
+                \min_i \{POE_i\} = POE_a = 2.5 \%
+            \end{gather*}
+            
+        El fondo mutuo que debemos de seleccionar es el de crecimiento agresivo con un valor esperado de crecimiento de 13.5\%, si quisiéramos un mayor nivel de confianza en nuestra estimación, podríamos realizar un estudio, pero este no puede representar un costo mayor del 2.5\% de nuestras inversiones; un criterio diferente que podemos seguir es el de la pérdida de oportunidad mínima, se llega a la misma decisión, la alternativa con la pérdida de oportunidad esperada mínima es la de la inversión en un crecimiento agresivo.
+
+\end{document}
