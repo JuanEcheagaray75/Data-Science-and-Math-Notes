@@ -24,3 +24,9 @@
 *.lot
 *.nav
 *.snm
+
+# Build scripts
+*.sh
+
+# ITESM logo
+logo_itesm.png
