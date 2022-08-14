@@ -1,0 +1,184 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[]{amsthm}
+\usepackage{amsmath}
+\usepackage[]{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage[letterpaper, margin=1.5in]{geometry}
+\usepackage[hidelinks]{hyperref}
+
+\usepackage{tikz}
+
+\decimalpoint
+
+\begin{document}
+    \begin{titlepage}
+        \begin{center}
+            \begin{figure}
+                \centering
+                \includegraphics[scale=0.13]{logo_itesm.png}\\ % Logo de la institución
+            \end{figure}
+        \vspace{5cm}
+        \LARGE{Instituto Tecnológico y de Estudios Superiores de Monterrey}\\
+        \fontsize{12}{14}\selectfont
+        \vspace{1cm}
+        \textbf{MA2004. Árboles de decisión}\\ % Nombre de la tarea
+        \vspace{0.7cm}
+        \begin{table}[h!]
+            \centering
+            \begin{tabular}{ ||c|c|| }
+                \hline
+                Nombre & Matrícula \\
+                \hline
+                Juan Pablo Echeagaray González & A00830646 \\
+                \hline
+                Verónica Victoria García De la Fuente & A00830383 \\
+                \hline
+                Emily Rebeca Méndez Cruz & A00830768 \\
+                \hline
+                Eugenio Santiesteban Zolezzi & A01720932 \\
+                \hline
+                Daniel de Zamacona Madero & A01570576 \\
+                \hline
+            \end{tabular}
+        \end{table}
+        \vspace{0.7cm}
+        Optimización estocástica\\ % Materia
+        \vspace{0.2cm}
+        MA2004B\\ % Clave de la materia
+        \vspace{0.2cm}
+        Fernando Elizalde Ramírez\\ % Nombre del profesor
+        \vspace{0.7cm}
+        12 de agosto del 2022\\ % Fecha de entrega
+        \end{center}
+    \end{titlepage}
+
+    \section{Problema 1}
+
+        Una empresa compra la materia prima a dos proveedores A y B, cuya calidad se muestra en la tabla siguiente:
+
+        La probabilidad de recibir un lote del proveedor A en el que haya un 1\% de piezas defectuosas es del 80\%. Los pedidos que realiza la empresa ascienden a 1,000 piezas. Una pieza defectuosa puede ser reparada por 1 euro. Si bien tal y como indica la tabla la calidad del proveedor B es menor, éste está dispuesto a vender las 1,000 piezas por 10 euros menos que el proveedor A. Indique el proveedor que debe utilizar.
+
+        \subsection{Procedimiento}
+
+            \begin{table}[h!]
+                \centering
+                \begin{tabular}{ ||c|c|| }
+                    \hline
+                    Alternativas & Estados de naturaleza \\
+                    \hline
+                    Proveedor A & \shortstack{1\% defectuosas \\ 2\% defectuosas \\ 3\% defectuosas} \\
+                    \hline
+                    Proveedor B & \shortstack{1\% defectuosas \\ 2\% defectuosas \\ 3\% defectuosas} \\
+                    \hline
+                \end{tabular}
+            \end{table}
+
+            Ya que se han establecido las alternativas y los estados de naturaleza, podemos apoyarnos de un árbol de decisión para visualizar los posibles resultados con sus costos asociados, esto lo vemos en la figura \ref{fig:arbol1}
+
+            \tikzset{
+                treenode/.style = {shape=rectangle, draw, align=center, top color=white, bottom color=white},
+                root/.style     = {treenode, bottom color=white, sibling distance=1cm},
+                level 1/.style = {sibling distance=3cm},
+                level 2/.style = {sibling distance=1.3cm},
+                dummy/.style    = {circle,draw, sibling distance = 1mm},
+                final/.style    = {sibling distance = 10cm},
+            }
+
+            \begin{figure}[!ht]
+                \centering
+                \begin{tikzpicture}[
+                    grow = right,
+                    edge from parent/.style = {draw, -latex},
+                    level distance = 3cm,
+                    sloped]
+                    \node [root] {\$19}
+                        child{
+                            node [dummy] {\$19}
+                                child{
+                                    node [final] {\$30}
+                                edge from parent node [above] {$0.3$}}
+                                child{
+                                    node [final] {\$20}
+                                edge from parent node [above] {$0.3$}}
+                                child{
+                                    node [final] {\$10}
+                                edge from parent node [above] {$0.4$}}
+                            edge from parent node [below] {$P_B$}}
+                        child{ 
+                            node [dummy] {\$23}
+                                child{
+                                    node [final] {\$40}
+                                edge from parent node [above] {$0.1$}}
+                                child{
+                                    node [final] {\$30}
+                                edge from parent node [above] {$0.1$}}
+                                child{
+                                    node [final] {\$20}
+                                edge from parent node [above] {$0.8$}}
+                        edge from parent node [above] {$P_A$}};
+                \end{tikzpicture}
+                \caption{Árbol de decisión de los proveedores}
+                \label{fig:arbol1}
+            \end{figure}
+
+    \section{Problema 2}
+
+        El gerente de una empresa tiene dos diseños posibles para su nueva línea de cerebros electrónicos, la primera opción tiene un 80\% de probabilidades de producir el 70\% de cerebros electrónicos buenos y un 20\% de probabilidades de producir el 50\% de cerebros electrónicos buenos, siendo el coste de este diseño de 450,000 de euros. La segunda opción tiene una probabilidad del 70\% de producir el 70\% de cerebros electrónicos buenos y una probabilidad del 30\% de producir el 50\% de cerebros electrónicos buenos, el coste de este diseño asciende a 600,000 euros. El coste de cada cerebro electrónico es de 100 euros, si es bueno se vende por 250 euros, mientras que si es malo no tiene ningún valor.
+        
+        Conociendo que la previsión es de fabricar 50,000 cerebros electrónicos, decida el diseño que debe elegir el gerente de la empresa.
+            
+        \subsection{Procedimiento}
+
+        \tikzset{
+            treenode/.style = {shape=rectangle, draw, align=center, top color=white, bottom color=white},
+            root/.style     = {treenode, bottom color=white, sibling distance=1cm},
+            level 1/.style = {sibling distance=3cm},
+            level 2/.style = {sibling distance=2cm},
+            dummy/.style    = {circle,draw, sibling distance = 1mm},
+            final/.style    = {sibling distance = 10cm},
+        }
+
+        \begin{figure}[!ht]
+            \centering
+            \begin{tikzpicture}[
+                grow = right,
+                edge from parent/.style = {draw, -latex},
+                level distance = 5cm,
+                sloped]
+                \node [root] {2,400,000}
+                    child{
+                        node [dummy] {2,400,000}
+                        child{
+                            node [final] {650,000}
+                            edge from parent node [below]{$P(50\% B) = 0.3$}
+                            }
+                        child{
+                            node [final] {3,150,000}
+                            edge from parent node [above]{$P(70\% B) = 0.7$}
+                            }
+                        edge from parent node [below]{Diseño 2}
+                        }
+                    child{
+                        node [dummy] {2,600,000}
+                        child{
+                            node [final] {800,000}
+                            edge from parent node [below]{$P(50\% B) = 0.2$}
+                        }
+                        child{
+                            node [final] {3,300,000}
+                            edge from parent node [above]{$P(70\% B) = 0.8$}
+                        }
+                        edge from parent node [above]{Diseño 1}
+                    }
+                ;
+            \end{tikzpicture}
+            \caption{Árbol de decisión de los diseños}
+            \label{fig:arbol2}
+        \end{figure}
+
+
+    
+\end{document}
