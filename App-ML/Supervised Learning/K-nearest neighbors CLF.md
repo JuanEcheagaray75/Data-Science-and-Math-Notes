@@ -4,7 +4,7 @@ Simplest ML algorithm, the entire training set $X_{train}$ is stored in memory, 
 
 When considering more than one neighbor, we use voting to assign a label. This means that for each test point, we count how many neighbors belong to class 0 and how many neighbors belong to class 1. We then assign the class that is more frequent: in other words, the majority class among the k-nearest neighbors. There is another variant in which there is a weight for each neighbor, for example, the closer the neighbor is to the test point, the more weight it has.
 
-![Showcase of KNN](2022-01-22-18-54-29.png)
+![Showcase of KNN](img/../../img/2022-01-22-18-54-29.png)
 
 The _decision boundary_ is the line that separates classes. It is easily seen here given that we are working with a 2-dimensional dataset.
 
