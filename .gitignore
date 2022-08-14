@@ -3,8 +3,24 @@
 *.vscode
 *.code-workspace
 
+# Virtual Environments
+*.venv
+
 # Jupyter notebooks
 *.ipynb_checkpoints
 
 # You don't need access to this directory
 /Life
+
+# Latex related
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.dvi
+*.lof
+*.lot
+*.nav
+*.snm
