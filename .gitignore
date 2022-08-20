@@ -9,6 +9,9 @@
 # Jupyter notebooks
 *.ipynb_checkpoints
 
+# Xournal++ autosave files
+*.autosave.xopp
+
 # You don't need access to this directory
 /Life
 
