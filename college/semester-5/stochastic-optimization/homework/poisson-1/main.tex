@@ -1,0 +1,95 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[]{amsthm}
+\usepackage{amsmath}
+\usepackage[]{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage[letterpaper, margin=1.5in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\decimalpoint
+
+\begin{document}
+    \begin{titlepage}
+        \begin{center}
+            \begin{figure}
+                \centering
+                \includegraphics[scale=0.13]{img/logo_itesm.png}\\ % Logo de la institución
+            \end{figure}
+        \vspace{5cm}
+        \LARGE{Instituto Tecnológico y de Estudios Superiores de Monterrey}\\
+        \fontsize{12}{14}\selectfont
+        \vspace{1cm}
+        \textbf{Actividad: Distribución de Poisson}\\ % Nombre de la tarea
+        \vspace{0.7cm}
+        \begin{table}[h!]
+            \centering
+            \begin{tabular}{ ||c|c|| }
+                \hline
+                Nombre & Matrícula \\
+                \hline
+                Juan Pablo Echeagaray González & A00830646 \\
+                \hline
+                Verónica Victoria García De la Fuente & A00830383 \\
+                \hline
+                Emily Rebeca Méndez Cruz & A00830768 \\
+                \hline
+                Eugenio Santiesteban Zolezzi & A01720932 \\
+                \hline
+                Daniel de Zamacona Madero & A01570576 \\
+                \hline
+            \end{tabular}
+        \end{table}
+        \vspace{0.7cm}
+        Optimización Estocástica\\ % Materia
+        \vspace{0.2cm}
+        MA2004B\\ % Clave de la materia
+        \vspace{0.2cm}
+        Dr. Fernando Elizalde Ramírez\\ % Nombre del profesor
+        \vspace{0.7cm}
+        21 de agosto del 2022\\ % Fecha de entrega
+        \end{center}
+    \end{titlepage}
+
+    \section{Problemas}
+
+        \subsection{Problema 1}
+
+            Suponga que $X$ tiene una distribución de Poisson con media 4. Calcule las posibilidades siguientes:
+            \begin{enumerate}
+                \item $P(X = 0)$
+                \item $P(X \leq 2)$
+                \item $P(X = 4)$
+                \item $P(X = 8)$
+            \end{enumerate}
+
+            \begin{gather*}
+                X \sim \text{Poisson}(\mu = 4) \\
+                P(X = 0) = \exp(-4) \frac{4^{0}}{0!} = \exp(-4) \approx 0.01831 \\
+                P(X \leq 2) = \sum_{i=0}^{2} \exp(-i) \frac{4^{i}}{i!} \approx 0.2381 \\
+                P(X = 4) = \exp{-4} \frac{4^{4}}{4!} = \frac{32}{3 \exp(4)} \approx 0.19536 \\
+                P(X = 8) = \exp{-4} \frac{4^{8}}{8!} = \frac{512}{315 \exp(4)} \approx 0.02977
+            \end{gather*}
+
+        \subsection*{Problema 2}
+            
+            Se supone que el número de defectos en los rollos de tela de cierta industria textil es una variable aleatoria de Poisson con una media de 0.1 defectos por metro cuadrado.
+
+            \begin{enumerate}
+                \item ¿cuál es la probabilidad de tener dos defectos en un metro cuadrado de tela?
+                \item ¿cuál es la probabilidad de tener un defecto en 10 metros cuadrados de tela?
+                \item ¿cuál es la probabilidad de no tener defectos en 20 metros cuadrados de tela?
+                \item ¿cuál es la probabilidad de tener al menos dos defectos en un metro cuadrado de tela?
+            \end{enumerate}
+
+            \begin{gather*}
+                X \sim \text{Poisson}(\mu t = 0.1 t) \\
+                P(X = 2) = \exp(-0.1) \frac{(0.1)^{2}}{2!} \approx 0.004524 \\
+                P(X = 10) = \exp(-0.1 \cdot 10) \frac{(0.1 \cdot 10)^{1}}{1!} \approx 0.36787 \\
+                P(X = 0) = \exp(-0.1 \cdot 20) \frac{(0.1 \cdot 20)^{0}}{0!} \approx 0.135335 \\
+                P(X >= 2) = 1 - \sum_{i=0}^{0} \exp(0.1) \frac{(0.1)^{i}}{i!} \approx 0.000154653
+            \end{gather*}
+
+
+\end{document}
