@@ -1,0 +1,415 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[]{amsthm}
+\usepackage{amsmath}
+\usepackage[]{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage[letterpaper, margin=1.5in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\decimalpoint
+
+\begin{document}
+    \begin{titlepage}
+        \begin{center}
+            \begin{figure}
+                \centering
+                \includegraphics[scale=0.13]{img/logo_itesm.png}\\ % Logo de la institución
+            \end{figure}
+        \vspace{5cm}
+        \LARGE{Instituto Tecnológico y de Estudios Superiores de Monterrey}\\
+        \fontsize{12}{14}\selectfont
+        \vspace{1cm}
+        \textbf{Tarea 3}\\ % Nombre de la tarea
+        \vspace{0.7cm}
+        \begin{table}[h!]
+            \centering
+            \begin{tabular}{ ||c|c|| }
+                \hline
+                Nombre & Matrícula \\
+                \hline
+                Juan Pablo Echeagaray González & A00830646 \\
+                \hline
+                Verónica Victoria García De la Fuente & A00830383 \\
+                \hline
+                Emily Rebeca Méndez Cruz & A00830768 \\
+                \hline
+                Eugenio Santiesteban Zolezzi & A01720932 \\
+                \hline
+                Daniel de Zamacona Madero & A01570576 \\
+                \hline
+            \end{tabular}
+        \end{table}
+        \vspace{0.7cm}
+        Optimización estocástica\\ % Materia
+        \vspace{0.2cm}
+        MA2004B\\ % Clave de la materia
+        \vspace{0.2cm}
+        Dr. Jaime Eduardo Martínez Sánchez\\ % Nombre del profesor
+        \vspace{0.7cm}
+        18 de agosto del 2022\\ % Fecha de entrega
+        \end{center}
+    \end{titlepage}
+
+    \section{Problemas}
+
+        \subsection*{Problema 1}
+
+            Three white and three black balls are distributed in two urns in such a way that each contains three balls. We say that the system is in state $i$, $i = 0, 1, 2, 3$, if the first urn contains i white balls. At each step, we draw one ball from each urn and place the ball drawn from the first urn into the second, and conversely with the ball from the second urn. Let $X_n$ denote the state of the system after the nth step. Explain why $\{X_n,n = 0, 1, 2,...\}$ is a Markov Chain and calculate its transition probability matrix.
+
+            Este evento puede verse como una Cadena de Markov discreta, dado que el siguiente estado de las urnas depende exclusivamente del estado actual en el que se encuentren; es decir, la probabilidad de que las urnas se encuentren en el estado $i$ depende solamente del estado $i-1$. Para definir su matriz de probabilidad podemos comenzar por enumerar todos los estados en los que se puede encontrar el sistema:
+
+            \begin{table}[!htbp]
+                \centering
+                \begin{tabular}{ |c|cc| }
+                    \hline
+                    Estado & Urna 1 & Urna 2 \\
+                    \hline
+                    0 & BBB & NNN \\
+                    1 & BBN & NNB \\
+                    2 & BNN & BBN \\
+                    3 & NNN & BBB \\
+                    \hline
+                \end{tabular}
+                \caption{Posibles estados de las urnas}
+                \label{table:urns}
+            \end{table}
+
+            Ahora con esta tabla de estados \ref{table:urns}, podemos ir definiendo las entradas de la matriz de probabilidades de forma relativamente sencilla. Por ejemplo, para el caso de la entrada $\mathbb{P}_{00}$, sabremos que es imposible que del estado 0 permanezca en este al intercambiar una bola de cada urna, pues sabemos de antemano que cada una solamente contiene bolas de su color.
+            \begin{equation}
+                \mathbb{P} = \begin{bmatrix}
+                    0 & 1 & 0 & 0 \\[2pt]
+                    \frac{1}{9} & \frac{4}{9} & \frac{4}{9} & 0 \\[2pt]
+                    0 & \frac{4}{9} & \frac{4}{9} & \frac{1}{9} \\[2pt]
+                    0 & 0 & 1 & 0 
+                \end{bmatrix}
+            \end{equation}
+
+        \subsection*{Problema 3}
+
+            Suppose that whether or not it rains today depends on previous weather conditions through the last three days. Show how this system may be analyzed by using a Markov chain. How many states are needed?
+
+            Now suppose that if it has rained for the past three days, then it will rain today with probability 0.8; if it did not rain for any of the past three days, then it will rain today with probability 0.2; and in any other case the weather today will, with probability 0.6, be the same as the weather yesterday. Determine $\mathbb{P}$ for this Markov chain.
+
+            Partiremos del supuesto de que existe una dependencia entre los eventos, que llueva un día, con si llovió en los 3 días anteriores. Sabiendo esto, podemos proponer el siguiente espacio de estados:
+            \begin{equation}
+                S = \left\{YYY, YYN, YNY, NYY, YNN, NYN, NNY, NNN\right\}
+            \end{equation}
+
+            Sabemos también que solamente se considera si llovió o no para describir el clima de un dado día, por lo que el número de estados posibles a considerar si tomamos $n$ días para definir una probabilidad de lluvia al día siguiente, es $2^{n}$.
+
+            Antes de pasar a la matriz de probabilidades, es útil realizar una tabla en la que se describan las probabilidades dadas en la segunda parte del enunciado:
+
+            \begin{table}
+                \centering
+                \begin{tabular}{ |c|c| }
+                    \hline
+                    MJV & S \\
+                    \hline
+                    YYY & 0.8 \\
+                    YYN & 0.4 \\
+                    YNY & 0.6 \\
+                    NYY & 0.6 \\
+                    YNN & 0.4 \\
+                    NYN & 0.4 \\
+                    NNY & 0.6 \\
+                    NNN & 0.2 \\
+                    \hline
+                \end{tabular}
+            \end{table}
+
+            \begin{equation}
+                \mathbb{P} = \begin{bmatrix}
+                    0.8 & 0.2 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0.4 & 0 & 0.6 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0.6 & 0 & 0.4 & 0 & 0 \\
+                    0.6 & 0.4 & 0 & 0 & 0 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 & 0 & 0.4 & 0.6 \\
+                    0 & 0 & 0.4 & 0 & 0.6 & 0 & 0 & 0 \\
+                    0 & 0 & 0 & 0.6 & 0 & 0.4 & 0 & 0 \\
+                    0 & 0 & 0 & 0 & 0 & 0 & 0.2 & 0.8
+                \end{bmatrix}
+            \end{equation}
+
+        \subsection*{Problema 4}
+
+            Consider a process $\{X_n,n = 0, 1,...\}$ which takes on the values 0, 1, or 2. Suppose:
+            \begin{equation}
+                P\{X_{n+1} = j \mid X_n = i, X_{n-1} = i_{n-1},...,X_0 = i_0\} = 
+                    \begin{cases}
+                        P_{ij}^{1}, & \text{when n is even} \\
+                        P_{ij}^{2}, & \text{when n is odd}
+                    \end{cases}
+            \end{equation}
+
+            where $\sum_{j=0}^{2} P_{ij}^{1} = \sum_{j=0}^{2} P_{ij}^{2} = 1, i = 0, 1, 2$. Is $\{X_n, n\geq 0\}$ a Markov Chain? If not, then show how, by enlarging the state space, we may transform it into a Markov Chain.
+
+            Sí es una cadena de Markov, pero es una cadena de Markov no homogénea en el tiempo, ya que se ha introducido una dependencia en la naturaleza del intervalo de tiempo $n$. Para transformarla en una Cadena de Markov podemos primero definir un nuevo espacio de estados:
+            \begin{equation}
+                S = \left\{0, 1, 2, \bar{0}, \bar{1}, \bar{2}\right\}
+            \end{equation}
+
+            Ahora definimos un nuevo proceso con las siguientes características:
+            \begin{gather*}
+                Y_n = i \Leftrightarrow X_n = i \land n \text{ es par} \\
+                Y_n = \bar{i} \Leftrightarrow X_n = i \land n \text{ es impar}
+            \end{gather*}
+
+            Ahora se define una matriz de probabilidades $\mathbb{P} = (P_{ij})_{ij \in S}$:
+            \begin{equation}
+                \begin{bmatrix}
+                    0 & U \\
+                    D & 0
+                \end{bmatrix}
+            \end{equation}
+
+            Donde tenemos $U = (P_{ij}^{1})_{ij \in \{0, 1, 2\}}$ y $D = (P_{ij}^{2})_{ij \in \{0, 1, 2\}}$
+
+        \subsection*{Problema 5}
+
+            A Markov Chain $\{X_n,n \geq 0\}$ with states $0, 1, 2$, has the transition probability matrix:
+            \begin{equation}
+                \begin{bmatrix}
+                    \frac{1}{2} & \frac{1}{3} & \frac{1}{6} \\[2pt]
+                    0 & \frac{1}{3} & \frac{2}{3} \\[2pt]
+                    \frac{1}{2} & 0 & \frac{1}{2}
+                \end{bmatrix}
+            \end{equation}
+
+            If $P\{X_0 = 0\} = P\{X_0 = 1\} = \frac{1}{4}$. Find $E\left[X_3\right]$.
+
+            Obtendremos primero $\mathbb{P}^{3}$:
+            \begin{equation}
+                \mathbb{P}^{3} = \frac{1}{108} \begin{bmatrix}
+                    39 & 22 & 47 \\
+                    48 & 16 & 44 \\
+                    45 & 24 & 39
+                \end{bmatrix}
+            \end{equation}
+            
+            Recordamos la definición del valor esperado como:
+            \begin{equation}
+                E\left[X_n\right] = \sum_{i=0}^{N} E\left[X_n \mid X_0 = i\right] P(X_0 = i)
+            \end{equation}
+
+            Ahora calculamos cada una de esas probabilidades condicionales:
+            \begin{gather*}
+                E\left[X_3 \mid X_0 = 0\right] = \left(0 \cdot \frac{39}{108} + 1 \cdot \frac{22}{108} + 2 \cdot \frac{47}{108} \right) = \frac{116}{108} \\
+                E\left[X_3 \mid X_0 = 1\right] = \left(0 \cdot \frac{48}{108} + 1 \cdot \frac{16}{108} + 2 \cdot \frac{44}{108} \right) = \frac{104}{108} \\
+                E\left[X_3 \mid X_0 = 2\right] = \left(0 \cdot \frac{45}{108} + 1 \cdot \frac{24}{108} + 2 \cdot \frac{39}{108} \right) = \frac{102}{108}
+            \end{gather*}
+
+            Y con esto podemos calcular el valor esperado como:
+            \begin{equation*}
+                \begin{split}
+                    E\left[X_3\right] =& \left(\frac{1}{4} \cdot \frac{116}{108} + \frac{1}{4} \cdot \frac{104}{108} + \frac{1}{2} \cdot \frac{102}{108} \right) \\
+                    & = \frac{53}{54} \simeq 0.981
+                \end{split}
+            \end{equation*}
+
+        \subsection*{Problema 6}
+
+            Let the transition probability matrix of a two-state Markov Chain be given, asin Example 4.2, by:
+
+            \begin{equation}
+                \mathbb{P} = \begin{bmatrix}
+                    p & 1 - p \\
+                    1 - p & p
+                \end{bmatrix}
+            \end{equation}
+
+            Show by mathematical induction that:
+
+            \begin{equation}
+                \mathbb{P}^{(n)} = \begin{bmatrix}
+                    \frac{1}{2} + \frac{1}{2} (2p - 1)^{n} & \frac{1}{2} - \frac{1}{2} (2p - 1)^{n} \\[2pt]
+                    \frac{1}{2} - \frac{1}{2} (2p - 1)^{n} & \frac{1}{2} + \frac{1}{2} (2p - 1)^{n} 
+                \end{bmatrix}
+            \end{equation}
+
+            Asumimos primero que la función dada es válida para el caso general $n$, ahora solamente debemos de demostrar que sigue siendo válida para el caso $n+1$:
+            \begin{equation}
+                \mathbb{P}^{n+1} = \mathbb{P}^{n} \mathbb{P} = \begin{bmatrix}
+                    P_{00}^{n} & P_{01}^{n} \\
+                    P_{10}^{n} & P_{11}^{n}
+                \end{bmatrix} \begin{bmatrix}
+                    P_{00} & P_{01} \\
+                    P_{10} & P_{11}
+                \end{bmatrix}
+            \end{equation}
+
+            Aprovechando nuestra hipótesis, sabemos que:
+            \begin{equation*}
+                \begin{split}
+                    P_{00}^{(n+1)} &= P_{00}^{(n)} P_{00} + P_{01}^{(n)} P_{10} \\
+                    & = \left(\frac{1}{2} + \frac{1}{2} (2p - 1)^{n}\right) p + \left(\frac{1}{2} - \frac{1}{2} (2p - 1)^{n}\right) (1 - p) \\
+                    & = \frac{1}{2} + \frac{1}{2} (2p - 1)^{n+1}
+                \end{split}
+            \end{equation*}
+
+            Como sabemos también que $P_{00}^{n+1} + P_{01}^{n+1} = 1$, el resultado anterior también será válido para $P_{01}^{n+1} = 1$, de la misma forma, estos resultados se pueden generalizar a la segunda fila de $\mathbb{P}^{n+1}$.
+
+        \subsection*{Problema 7}
+
+            Si $P$ y $Q$ dos matrices estocásticas (o doblemente estocásticas) de la misma dimensión $(2 \times 2)$, demuestre que $PQ$ también es estocástica (o doblemente estocástica).
+
+            NOTA: Este resultado es válido para cualquier cadena con k-estados.
+
+            Sean las matrices:
+            \begin{equation}
+                \begin{split}
+                    P = \begin{bmatrix}
+                        p_{11} & p_{12} \\
+                        p_{21} & p_{22}
+                    \end{bmatrix} & \qquad Q = \begin{bmatrix}
+                        q_{11} & q_{12} \\
+                        q_{21} & q_{22}
+                    \end{bmatrix}
+                \end{split}
+            \end{equation}
+
+            En donde la suma de cada una de sus filas es igual a 1, por ejemplo $p_{11} + p_{12} = 1$. Calculamos ahora $PQ$:
+            \begin{equation}
+                \begin{split}
+                    PQ =& \begin{bmatrix}
+                        p_{11} & p_{12} \\
+                        p_{21} & p_{22}
+                    \end{bmatrix} \begin{bmatrix}
+                        q_{11} & q_{12} \\
+                        q_{21} & q_{22}
+                    \end{bmatrix} \\
+                    & \begin{bmatrix}
+                        p_{11} q_{11} + p_{12} q_{21} & p_{11} q_{12} + p_{12} q_{22} \\
+                        p_{21} q_{11} + p_{22} q_{21} & p_{21} q_{12} + p_{22} q_{22}
+                    \end{bmatrix}
+                \end{split}
+            \end{equation}
+
+            La suma de los renglones da lo siguiente:
+            \begin{gather*}
+                p_{11} q_{11} + p_{12} q_{21} + p_{11} q_{12} + p_{12} q_{22} = p_{11} (q_{11} + q_{12}) + p_{12} (q_{12} + q_{22}) = p_{11} + p_{12} = 1\\
+                p_{21} q_{11} + p_{22} q_{21} + p_{21} q_{12} + p_{22} q_{22} = p_{21} (q_{11} + q_{12}) + p_{22} (q_{12} + q_{22}) = p_{21} + p_{22} = 1\\
+            \end{gather*}
+
+            Por lo que se demuestra que $PQ$ es estocástica.
+
+            En el caso segundo de que $P$ y $Q$ sean matrices doblemente estocásticas, tenemos que la suma de las columnas de cada matriz debe de ser igual a 1:
+            \begin{gather*}
+                p_{11} q_{11} + p_{12} q_{21} + p_{21} q_{11} + p_{22} q_{21} = q_{11} (p_{11} + p_{21}) + q_{21} (p_{12} + p_{22}) = q_{11} + q_{21} = 1 \\
+                p_{11} q_{12} + p_{12} q_{22} + p_{21} q_{12} + p_{22} q_{22} = q_{12} (p_{11} + p_{21}) + q_{22} (p_{12} + p_{22}) = q_{12} + q_{22} = 1
+            \end{gather*}
+
+            Por lo que si $P$ y $Q$ son doblemente estocásticas se cumple que $PQ$ también es doblemente estocástica.
+
+        \subsection*{Problema 8}
+
+            Del 7, si  es una matriz estocástica (o doblemente estocástica), entonces $PP = P^{2}$ también es una matriz estocástica (o doblemente estocástica. Si $P^n$ es estocástica (o doblemente estocástica) entonces $P^{n+1}= P^{n} P$ también es una matriz estocástica (o doblemente estocástica). Por lo tanto, se demuestra por inducción matemática que $P^n$ es una matriz estocástica (o doblemente estocástica).
+
+        \subsection*{Problema 9}
+
+            Sea $\xi_0, \xi_1$,... una sucesión de variables independientes con idéntica distribución $Ber(p)$. Determine si el proceso $\{Xn: \geq 1\}$ definido a continuación es una Cadena de Markov.
+
+            \begin{equation}
+                X_n = \xi_n + \xi_{n-1}
+            \end{equation}
+
+            En caso afirmativo determine el espacio de estados y encuentre la matriz de probabilidades de transición.
+
+            \begin{gather*}
+                X_n = 0 \leftrightarrow \xi_n = 0 \land \xi_{n-1} = 0 \\
+                X_n = 1 \leftrightarrow (\xi_n = 1 \land \xi_{n-1} = 0) \lor (\xi_n = 0 \land \xi_{n-1} = 1) \\
+                X_n = 1 \leftrightarrow \xi_n = 1 \land \xi_{n-1} = 1 
+            \end{gather*}
+
+            Si $X_n = 0$, entonces la probabilidad de que $X_{n+1} = 0$ es $1 - p$ ya que $\xi_{n-1} + \xi_{n} = 0$, por lo que $\xi_{n} = \xi_{n-1} = 0$ y entonces $X_{n+1}$ ocurre sí y sólo si $\xi_{n+1} = 0$. Si $X_n = 0$, entonces la probabilidad de que $X_{n+1} = 1$ es $p$. Si $X_n = 0$ entonces la probabilidad de que $X_{n+1} = 2$ es 0 $\because \xi_{n+1} \in \left[0, 1\right]$. La suma de estas probabilidades es 1.
+
+            Siguiendo este proceso:
+            \begin{gather*}
+                P(X_{n+1} = 0 \mid X_n = 1) = P(\xi_n = 0 \land \xi_{n+1} = 0) = (1 - p)^{2} \\
+                P(X_{n+1} = 1 \mid X_n = 1) = P(\xi_n = 0 \land \xi_{n+1} = 1) + P(\xi_n = 1 \land \xi_{n+1} = 0) = 2p (1 - p) \\
+                P(X_{n+1} = 2 \mid X_n = 1) = P(\xi_n = 1 \land \xi_{n+1} = 1) = p^{2} \\
+                \sum_{i=0}^{2} P(X_{n+1} = i \mid X_n = 1) = (1 - p)^{2} + 2p (1 - p) + p^{2} = 1 \\
+                P(X_{n+1} = 0 \mid X_n = 2) = P(\xi_{n + 1} = 2) + P(\xi_{n + 1} = -1) = 0 \\
+                P(X_{n+1} = 1 \mid X_n = 2) = P(\xi_{n+1} = 0) = 1-p \\
+                P(X_{n+1} = 2 \mid X_n = 2) = P(\xi_{n+1} = 1) = p \\
+                \sum_{i=0}^{2} P(X_{n+1} = i \mid X_n = 2) = 1 - p + p = 1
+            \end{gather*}
+
+            Debido a que la suma de las probabilidades de un cambio de estado es 1 por cada estado dado, este es un proceso de Markov con matriz de transición dada por:
+
+            \begin{equation}
+                \mathbb{P} = \begin{bmatrix}
+                    1-p & p & 0 \\
+                    (1-p)^{2} & 2p(1-p) & p^{2} \\
+                    0 & 1-p & p
+                \end{bmatrix}
+            \end{equation}
+
+        \subsection*{Problema 10}
+
+            La tabla de probabilidades de transición que se presenta abajo, representa el comportamiento de los clientes de una tienda de departamentos con respecto al pago de sus facturas mensuales:
+
+            ¿Debería cancelar el director el crédito de los clientes que no han pagado? ¿Por qué?
+
+            No porque tiene la misma probabilidad de que pagué la próxima mensualidad que los clientes que pagaron la última mensualidad.
+
+        \subsection*{Problema 11}
+
+            Remítase al problema anterior. Suponga que un conjunto de clientes (llamados "imprevisibles") tiene la tabla de probabilidades de transición de este problema, y otro conjunto (llamado "previsibles") tiene la siguiente tabla:
+
+            \begin{enumerate}
+                \item  ¿Cómo se compara el comportamiento de los clientes previsibles con las de los 
+                clientes imprevisibles?
+                \item Suponga ahora que la tienda de departamentos ha determinado que "hay 
+                equilibrio" cuando la probabilidad de pago es de 0.949. Si es posible clasificar 
+                a un cliente nuevo como "imprevisible", ¿debe aceptarse para crédito? ¿Por 
+                qué?
+                \item ¿Debe aceptar la tienda a un cliente nuevo clasificado como "previsible" cuyo 
+                estado se desconoce?
+            \end{enumerate}
+
+        \subsection*{Problema 12}
+
+            Una compañía petrolera quiere ampliar las instalaciones de descarga de su refinería de Australia. Debido a las variaciones aleatorias del clima, de las demoras de descarga y de otros factores, los buques llegan a la refinería para descargar crudo según una distribución de Poisson con tasa promedio $\lambda = 5$ buques por semana. El tiempo de servicio también es de Poisson, con tasa de servicio promedio $\mu = 10$ buques por semana.
+            
+            \begin{enumerate}
+                \item ¿Cuál es la cantidad promedio de buques en espera de entregar petróleo crudo?
+                \item ¿Cuál es el tiempo promedio que debe esperar un buque para comenzar la entrega de su carga a la refinería?
+                \item ¿Cuál es el tiempo total promedio (espera más entrega) de permanencia de un buque en la refinería?
+            \end{enumerate}
+
+            Dada que la información del problema es clara, podemos comenzar a calcular directamente los valores solicitados:
+            \begin{gather*}
+                \rho = \frac{\lambda}{\mu} = \frac{1}{2} \\
+                L_s = \frac{\rho}{1 - \rho} = \frac{\frac{1}{2}}{\frac{1}{2}} \\
+                W_s = \frac{1}{\mu - \lambda} = \frac{1}{10 - 5} = \frac{1}{5} \\
+                W_q = W_s - \frac{1}{\mu} = \frac{1}{5} - \frac{1}{10} = \frac{1}{10} \\
+                L_q = \lambda W_q = 5 \cdot \frac{1}{10} = \frac{1}{2}
+            \end{gather*}
+
+            Entonces podemos responder:
+            \begin{enumerate}
+                \item Cantidad promedio de buques en espera de entregar petróleo = $L_q = \frac{1}{2}$ buques
+                \item Tiempo promedio de espera antes de entregar petróleo = $W_q = \frac{1}{10}$ de semana
+                \item Tiempo total promedio de servicio = $W_s = \frac{1}{5}$ de semana
+            \end{enumerate}
+
+        \subsection*{Problema 13}
+
+            El aeropuerto internacional O'Hare de Chicago utiliza dos pistas cuando hay mucha demanda. Suponga que una de las pistas se dedica exclusivamente a despegues y la otra sólo a aterrizajes. Con este método de operación, los "tiempos de servicio" se distribuyen exponencialmente con media de dos minutos por solicitud en cada una de las pistas. Suponga que no hay interferencia entre una pista y la otra, de manera que puedan operar en forma independiente. Suponga que las solicitudes de despegue tienen distribución de Poisson con tasa de 25 por hora, y que las solicitudes de aterrizaje también siguen una distribución de Poisson con tasa de 25 por hora.
+            
+            \begin{enumerate}
+                \item Calcule el número promedio de minutos de espera para atender una solicitud de despegue o aterrizaje.
+                \item Suponga ahora que los controladores de O'Hare pueden usar las dos pistas para ambos propósitos. Sin embargo, los requisitos de seguridad para este modo de operación prolongan el tiempo promedio de servicio de 2 a 2.16 minutos por solicitud (los tiempos de servicio reales están distribuidos exponencialmente con media = 2.16 minutos). El agrupamiento de los dos flujos de llegada de solicitudes (despegues y aterrizajes) da como resultado llegadas de Poisson con tasa de 50 por hora. Calcule ahora el tiempo de espera promedio por solicitud. ¿Cuál es la mejor disposición: sistemas separados o un sistema agrupado?
+            \end{enumerate}
+
+            \begin{gather*}
+                \mu = \frac{1}{2} \frac{sol}{min} \\
+                \lambda_d = 25 \frac{aterr}{hora} = \frac{25}{60} \frac{aterr}{min} = \frac{5}{12} \frac{aterr}{min} \\
+                \lambda_a = 25 \frac{aterr}{hora} = \frac{5}{12} \frac{aterr}{min} \\
+                W_q = \frac{1}{\mu - \lambda} - \frac{1}{\mu} = \frac{1}{1/2 - 5/12} - \frac{1}{1/2} = 10 \\
+            \end{gather*}
+            
+            Por ende, el número promedio de minutos de espera para atender una solicitud de despegue, o de aterrizaje es de 10 minutos.
+\end{document}
