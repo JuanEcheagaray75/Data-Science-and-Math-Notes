@@ -234,6 +234,12 @@ There should be specific dates and terms of payment, it is not uncommon for larg
 
 ### Establish lines of communication
 
+1. Emergency contact information
+2. Incident reporting process
+3. Incident definition
+4. Status report frequency
+5. PGP and other alternatives: communication with the customer is necessary, all mediums of communication must provide some form of encryption
+
 ### Rules of engagement
 
 ### Capabilities and technologies in place
