@@ -166,6 +166,11 @@ It's recommended that it be clearly stated in the contract that additional work 
 
 ### Scope Creep
 
+> Refers to changes, continuous or uncontrolled growth in a project's scope, at any point after the project begins.
+
+1. If a customer is pleased with the work done in a particular engagement, it's quite common for them to ask for additional work to be made, do not hesitate to ask for further funding for the extra time spent on the project, if they refuse, it's simply not worth it to stay on to do that work
+2. When dealing with existing customers, take care to keep the prices lower. Taking advantage of a good situation by price gouging is an excellent way to lose a client. **The best source for future work is through existing customers**
+
 ### Specify start and end dates
 
 ### Dealing with 3rd parties
