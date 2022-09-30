@@ -10,6 +10,7 @@
       - [General questions](#general-questions)
     - [Scope Creep](#scope-creep)
     - [Specify start and end dates](#specify-start-and-end-dates)
+    - [Specify IP ranges and domains](#specify-ip-ranges-and-domains)
     - [Dealing with 3rd parties](#dealing-with-3rd-parties)
     - [Define acceptable social engineering pretexts](#define-acceptable-social-engineering-pretexts)
     - [DoS testing](#dos-testing)
@@ -179,7 +180,14 @@ One of the most common ares in which scope creep occurs is when retesting, retes
 
 Add a simple statement to the contract which mentions that all retesting must be done within a certain timeframe after the final report delivery, then it becomes the pentester's responsibility to spearhead the retesting effort, if the customer requests an extension, allow it with the condition that payment be fulfilled at the originally specified date, always perform a quality retest.
 
+### Specify IP ranges and domains
+
+> Before starting a pentest, all targets must be identified
+
+These targets should be obtained by the customer through the previously mentioned questionnaires, they can be given in the form of specific IP addresses, network ranges, or domain names by the customer. It is important to define if systems like firewalls and IDS/IPS or networking equipment between the pentester and the final target will be in scope or not. Additional elements such as upstream providers and other 3rd party providers should be identified and defined whether they are in scope or not.
+
 ### Dealing with 3rd parties
+
 
 ### Define acceptable social engineering pretexts
 
