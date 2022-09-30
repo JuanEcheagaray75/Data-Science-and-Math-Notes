@@ -212,6 +212,14 @@ Stress testing or denial of service testing should be discussed before the engag
 
 ### Payment terms
 
+> Don't forget how you will be paid
+
+There should be specific dates and terms of payment, it is not uncommon for larger organizations to delay payment for as long as possible, here are some of the most common payment methods:
+
+1. Net 30: the total amount is due within 30 days of the delivery of the final report, the number of days can be determined by the pentester firm
+2. Half upfront: half of the total bill is paid upfront before testing begins
+3. Recurring: recurring payment schedule, commonly used for long-term engagements
+
 ### Goals
 
 ### Establish lines of communication
