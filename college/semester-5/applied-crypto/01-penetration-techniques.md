@@ -173,6 +173,12 @@ It's recommended that it be clearly stated in the contract that additional work 
 
 ### Specify start and end dates
 
+> Explicitly state start and end dates, allowing the project to have a definitive end
+
+One of the most common ares in which scope creep occurs is when retesting, retesting sounds like a good idea, it shows that the pentester's firm is caring and diligent, but remember that work is not paid until it is completed.
+
+Add a simple statement to the contract which mentions that all retesting must be done within a certain timeframe after the final report delivery, then it becomes the pentester's responsibility to spearhead the retesting effort, if the customer requests an extension, allow it with the condition that payment be fulfilled at the originally specified date, always perform a quality retest.
+
 ### Dealing with 3rd parties
 
 ### Define acceptable social engineering pretexts
