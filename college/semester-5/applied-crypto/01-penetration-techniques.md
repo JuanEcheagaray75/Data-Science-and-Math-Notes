@@ -255,6 +255,16 @@ There should be specific dates and terms of payment, it is not uncommon for larg
 
 ### Capabilities and technologies in place
 
+> Good pentests do not check for un-patched systems. They also test the capabilities of the target organization
+
+1. Ability to detect and respond to information gathering
+2. Ability to detect and respond to foot printing
+3. Ability to detect and respond to scanning and vulnerability analysis
+4. Ability to detect and respond to infiltration
+5. Ability to detect and respond to data aggregation
+6. Ability to detect and respond to data ex-filtration
+
+
 ## Intelligence gathering
 
 - Information gathering on the given organization, the goal is finding attack mediums on the target
