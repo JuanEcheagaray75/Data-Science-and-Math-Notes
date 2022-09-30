@@ -188,6 +188,19 @@ These targets should be obtained by the customer through the previously mentione
 
 ### Dealing with 3rd parties
 
+> There are a number of situations in which engagement with 3rd party services or applications will need to be tested, it is not enough for the client to grant its permission.
+
+This tendency has gained strength as cloud services have become more popular, permission must be obtained from the 3rd party providers in order to test the hosted systems, failing to do so may result in violating a law.
+
+1. Cloud Services:
+   1. Often the main issue with these services is that there is data from multiple organizations stored on one physical medium, often the security between these data domains is lacking, the cloud services provider needs to be alerted of the testing being performed, it needs to grant its permission to perform the test. There needs to be a direct security contact within the cloud service that can be contacted in the event that a security vulnerability is found.
+2. ISP:
+   1. Verify the ISP terms of service with the client. In many cases the ISP will have specific provisions for testing. Review these terms carefully before launching an attack
+3. MSSPs:
+   1. They may also need to be notified of testing. Specifically, they will need to be notified when the system and services that they own are to be tested
+4. Countries where servers are hosted
+   1. Verify where the servers are being housed
+   2. After you have validated the country, review the laws of the specific country before beginning testing
 
 ### Define acceptable social engineering pretexts
 
