@@ -79,6 +79,12 @@ The extra 20% on the back-end of the time value is called **padding**. Outside o
 
 ### Additional Support Based on Hourly Rate
 
+> Anything that is not explicitly stated within the scope of engagement must be handled very carefully
+
+As the scope of a project increases, resources are consumed and the profits of the tester are reduced, they may even create confusion and anger from the customer side. Any requests outside the original scope should be documented in the form of a **Statement of Work** that clearly identifies and defines the work to be done.
+
+It's recommended that it be clearly stated in the contract that additional work will be done for a flat fee per hour and explicitly state that additional work cannot be performed without a **SoW**.
+
 ### Questionnaires
 
 ### General questions
