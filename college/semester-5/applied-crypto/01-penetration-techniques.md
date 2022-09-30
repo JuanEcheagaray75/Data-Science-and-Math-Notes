@@ -242,6 +242,17 @@ There should be specific dates and terms of payment, it is not uncommon for larg
 
 ### Rules of engagement
 
+> Defining how long the test is to occur
+
+1. Timeline: while the scope defines the start and end, a proper timeline defines everything that happens in between, it should be understood that the timeline may change as the test progresses, having a timeline allows everyone involved in the process to be aware of the work being done and the people responsible for said work
+2. Locations: establish with the customer if there are any destinations the pentester will need to travel to during the test
+3. Evidence handling: always use encryption and sanitize your test machine between tests
+4. Regular status meetings: have regular meetings with the customer informing them of the overall progress, they should be kept to 3 concepts, plans, progress and problems
+5. Time of the day to test
+6. Dealing with shunning: there are times when shunning is acceptable, if the test is to be a full black-box test where you are not only testing the tech, but the capabilities of the target organization's security team, shunning would be perfectly fine, contrary to when testing a large number of systems
+7. Permission to test
+8. Legal considerations
+
 ### Capabilities and technologies in place
 
 ## Intelligence gathering
