@@ -7,7 +7,7 @@
     - [Scoping Meeting](#scoping-meeting)
     - [Additional Support Based on Hourly Rate](#additional-support-based-on-hourly-rate)
     - [Questionnaires](#questionnaires)
-    - [General questions](#general-questions)
+      - [General questions](#general-questions)
     - [Scope Creep](#scope-creep)
     - [Specify start and end dates](#specify-start-and-end-dates)
     - [Dealing with 3rd parties](#dealing-with-3rd-parties)
@@ -87,7 +87,82 @@ It's recommended that it be clearly stated in the contract that additional work 
 
 ### Questionnaires
 
-### General questions
+> During initial communications with the customer there are several questions which the client will have to answer in order for the engagement scope to be properly estimated. Below lies a few sample questions which may be asked during this phase:
+
+#### General questions
+
+1. Network Pentest
+   1. Why is the customer having the penetration test performed on their environment?
+   2. Is the pentest required for a compliance reason?
+   3. When does the client want the pentest to be performed?
+      1. During business hours?
+      2. After business hours?
+   4. How many total IP addresses are being tested?
+      1. Internal IPs?
+      2. External IPs?
+   5. Are there any devices that may impact the pentest (firewall, intrusion detection/prevention system, web-app firewall, etc...)?
+   6. If the system is penetrated, how is the pentest team to proceed?
+      1. Perform a local vulnerability assesment on the machine?
+      2. Attempt to get the highest privileges?
+      3. Perform no, minimal, dictionary, or brute-force password attacks against the local password hashes obtained?
+2. Web Application Pentest
+   1. How many web-apps are being tested?
+   2. How many log-in systems are being assessed?
+   3. How many static/dynamic pages are being tested?
+   4. Will the source code be provided?
+   5. Will there be any form of documentation?
+   6. Will static analysis be performed?
+   7. Does the client want **fuzzing** performed on the web-app?
+   8. Does the client want role-based testing performed?
+   9. Does the client want credential scan performed?
+3. Wireless Network Pentest
+   1. How many wireless networks are in place?
+   2. Is a guest wireless network used?
+      1. Does the guest network require authentication?
+      2. What type of encryption is used on the wireless network?
+      3. What is the square footage coverage?
+      4. Will enumeration of rogue devices be performed?
+      5. Will the team perform wireless attacks against clients?
+      6. Approximately how many clients are connected to the wireless network?
+4. Physical Pentest
+   1. How many locations are being tested?
+   2. Is the physical location a shared facility?
+      1. How many floors are being considered? Which of those floors are being tested?
+      2. Are there any security guards that will need to be bypassed?
+         1. Are they self employed or 3rd party?
+         2. Are they armed?
+         3. Are they allowed to use force?
+      3. How many entrances are there?
+      4. Is the use of lock picks or bump keys allowed?
+      5. Is the purpose of this test to verify compliance?
+      6. What is the square footage of the area in scope
+      7. Are all physical security measures documented?
+      8. Are video cameras being used?
+         1. Are the cameras client owned?
+      9. Is there an armed alarm system being used?
+         1. Is the alarm silent?
+         2. Is the alarm triggered by motion?
+         3. Is the alarm triggered by the opening of windows and doors?
+5. Social engineering
+   1. Does the client have a list of email addresses they would like SE to be performed against?
+   2. Does the client have a list of phone numbers they would like SE to be performed against?
+   3. Is SE for the purpose of gaining physical access to the clients facilities?
+      1. How many people will be targeted?
+6. For Business Unit Managers
+   1. Is the manager aware of the pentest?
+   2. What is the main datum that would create the greatest risk for the client?
+   3. Are testing and validation procedures to verify the client's business apps are functioning properly?
+   4. Will the testers have access to the Quality Assurance testing procedures from when the apps were developed?
+   5. Are Disaster Recovery procedures in place?
+7. For System Administrators
+   1. Are there any systems that can be tagged as fragile?
+   2. Are there systems on the network that the client does not own?
+   3. Are Change Management procedures in place?
+   4. What is the mean time to repair system outages?
+   5. Is any monitoring software in place?
+   6. What are the most critical servers and applications?
+   7. Are backups tested on a regular basis?
+   8. When was the last time the backups were restored?
 
 ### Scope Creep
 
