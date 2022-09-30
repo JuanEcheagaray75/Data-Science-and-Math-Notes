@@ -69,6 +69,14 @@ The extra 20% on the back-end of the time value is called **padding**. Outside o
 
 ### Scoping Meeting
 
+> The goal of the scoping meeting is to define what is to be tested, rules of engagement and costs are not covered during this meeting
+
+1. Establish a Rough Order of Magnitude (ROM) for the project, and validate the assumptions with the client
+2. State the range of IPs that will be tested, the client can't just assume that the tester must identify their network and attack it, possible legal issues must be considered
+   1. It is the responsibility of the tester to convey the last thought to the client, impart the importance of implicit scoping
+   2. Verify that the customer owns all the assets to be tested, for example the DNS servers, email server, the actual hardware their web servers run on and their firewall/IDS/IPS solutions. **If they do not own them, permission from the 3rd party must be obtained**
+   3. Consider regional laws, for example, one can't just apply certain techniques of social engineering in certain places of the world, ie. the European Union
+
 ### Additional Support Based on Hourly Rate
 
 ### Questionnaires
