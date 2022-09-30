@@ -222,6 +222,16 @@ There should be specific dates and terms of payment, it is not uncommon for larg
 
 ### Goals
 
+> Every pentest must be goal-oriented
+
+1. Primary:
+   1. It should not be driven by compliance, compliance does not equal security. It should be understood that many organizations undergo testing because of compliance, it should not be the main goal of the test, a firm may be hired to perform a pentest as a part of a PCI-DSS requirements
+2. Secondary:
+   1. Directly related to compliance, they are closely related to the primary goals, remember that primary goals get the attention of upper management
+3. Business analysis:
+   1. Determine the maturity level of the client's security posture, for clients with little to no maturity, a vulnerability analysis first is usually the best idea
+   2. Establish with the customer in advance what information about the systems will they be providing
+
 ### Establish lines of communication
 
 ### Rules of engagement
