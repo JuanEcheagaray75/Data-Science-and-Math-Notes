@@ -208,6 +208,8 @@ Social engineering and spear-phishing attacks are widely used, the most successf
 
 ### DoS testing
 
+Stress testing or denial of service testing should be discussed before the engagement begins, it can be a topic that many organizations are uncomfortable due to the potentially damaging nature of this testing. If the organization is only worried about the confidentiality or integrity of their data, stress testing may not be necessary, however if the organization is worried about availability, stress testing may be necessary, and it should be applied in a non-production environment identical to the production environment.
+
 ### Payment terms
 
 ### Goals
