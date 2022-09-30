@@ -204,6 +204,8 @@ This tendency has gained strength as cloud services have become more popular, pe
 
 ### Define acceptable social engineering pretexts
 
+Social engineering and spear-phishing attacks are widely used, the most successful attacks use pretexts like sex, drugs, and rock and roll; however some of these pretexts may not be appropriate in a corporate environment, be sure that any pretexts chosen for test are approved in writing before testing begins.
+
 ### DoS testing
 
 ### Payment terms
