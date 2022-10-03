@@ -72,12 +72,6 @@
             La versión usada para este entregable es \texttt{6.1.38}, se han utilizado sus versiones para los sistemas operativos \emph{Windows-OS} y \emph{Linux}.
 
             Una vez instalada la aplicación, el usuario verá una ventana similar a la presentada en la figura \ref{fig:fresh-vbox}.
-            \begin{figure}[!htbp]
-                \centering
-                \includegraphics[scale=0.25]{img/virtual-box.png}
-                \caption{Ventana de bienvenida de VirtualBox}
-                \label{fig:fresh-vbox}
-            \end{figure}
 
         \subsection{Instalación de Kali-Linux} \label{sec:kali-install}
 
@@ -90,22 +84,10 @@
             \end{itemize}
 
             Al realizar estos pasos con éxito se verá una máquina como la de la figura \ref{fig:kali-init}.
-            \begin{figure}[!htbp]
-                \centering
-                \includegraphics[scale=0.25]{img/kali-screen.png}
-                \caption{Ventana de inicio de Kali}
-                \label{fig:kali-init}
-            \end{figure}
 
         \subsection{Instalación de Windows}
 
             El siguiente paso en esta guía es la instalación de una máquina virtual con sistema operativo \emph{Windows 10}, dicha máquina puede ser descargada del siguiente \href{https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/}{enlace}. Para nuestro caso descargaremos la máquina virtual \texttt{MSEdge on Win10 (x64) Stable 1809} para la plataforma \emph{VirtualBox} como se ve en la figura \ref{fig:windows-download}.
-            \begin{figure}[!htbp]
-                \centering
-                \includegraphics[scale=0.3]{img/win-download.png}
-                \caption{Descarga de máquina virtual con Windows 10}
-                \label{fig:windows-download}
-            \end{figure}
 
             Ya que se descomprima el archivo \texttt{.zip} descargado se seguirá el mismo procedimiento que el descrito en la sección \ref{sec:kali-install}, yendo a la ruta \texttt{File > Import Appliance} y seleccionando el archivo \texttt{.ova} generado en la carpeta descomprimida; una vez más no se recomienda modificar los valores por defecto. De realizar estos pasos con éxito, el usuario podrá iniciar sesión con las siguientes credenciales:
             \begin{itemize}
@@ -114,30 +96,12 @@
             \end{itemize}
 
             Al iniciar sesión el usuario verá una pantalla como la de la figura \ref{fig:windows-init}.
-            \begin{figure}[!htbp]
-                \centering
-                \includegraphics[scale=0.2]{img/windows-init.png}
-                \caption{Pantalla de inicio de Windows}
-                \label{fig:windows-init}
-            \end{figure}
 
         \subsection{Instalación de Metasploitable}
 
             Ahora se procede a descargar una máquina virtual de \emph{Metasploitable} del siguiente \href{https://sourceforge.net/projects/metasploitable/}{enlace}. Al descomprimir el archivo \texttt{.zip} se encontrará un directorio con los contenidos presentes en la figura \ref{fig:meta-download}.
-            \begin{figure}[!htbp]
-                \centering
-                \includegraphics[scale=0.2]{img/meta-download.png}
-                \caption{Archivos descargados de Metasploitable}
-                \label{fig:meta-download}
-            \end{figure}
 
             Se añade ahora una nueva máquina virtual por la ruta \texttt{Machine > New}, el tipo de máquina es \texttt{Linux} y la versión es \texttt{Ubuntu 64bits} como se ve en la figura \ref{fig:meta-create}.
-            \begin{figure}
-                \centering
-                \includegraphics[scale=0.25]{img/meta-create.png}
-                \caption{Creación de máquina virtual Metasploitable}
-                \label{fig:meta-create}
-            \end{figure}
 
             En la sección de disco duro hay que escoger la opción de utilizar un disco duro virtual existente. Aquí cargaremos el archivo \texttt{.vmdk} que se encuentra en la carpeta que descomprimimos al comienzo de este paso. Al cargar ese archivo y continuar con los valores por defecto de instalación podremos instalar la máquina. Iniciaremos sesión en ella con las credenciales:
             \begin{itemize}
@@ -146,12 +110,6 @@
             \end{itemize}
 
             Al iniciar sesión con éxito veremos una pantalla de consola como la de la figura \ref{fig:meta-init}.
-            \begin{figure}[!htbp]
-                \centering
-                \includegraphics[scale=0.3]{img/meta-init.png}
-                \caption{Ventana de inicio de Metasploitable}
-                \label{fig:meta-init}
-            \end{figure}
 
         \subsection{Instalación de Ubuntu}
 
@@ -162,20 +120,8 @@
             Después se enciende la máquina virtual, recibiremos una ventana como la de la figura \ref{fig:ubuntu-iso-load}, seleccionar aquí el archivo \texttt{.iso} que descargamos con anterioridad. Se continuará con el proceso de instalación, escogiendo la opción de \texttt{Install Ubuntu}, los valores por defecto no serán modificados y se seleccionará la opción de borrado del disco duro.
 
             Las credenciales de acceso así como el nombre de la máquina virtual quedan a libre elección del usuario, se recomienda que la zona horaria seleccionada sea la del usuario, permitirá darle una interpretación más sencilla a las actividades venideras.
-            \begin{figure}[!htbp]
-                \centering
-                \includegraphics[scale=0.3]{img/ubuntu-install.png}
-                \caption{Carga de archivo .iso de Ubuntu}
-                \label{fig:ubuntu-iso-load}
-            \end{figure}
 
             Cuando termine el proceso de instalación puede apagarse la máquina, para después seleccionarla en la ventana inicial de \emph{VirtualBox}, seguir la ruta \texttt{Settings > Storage > Controller: IDE}, seleccionar el disco que viene cargado con click-derecho y remover. Se tiene que dar \texttt{ok} en esa pantalla para que los cambios tengan efecto. Al realizar este paso para después arrancar la máquina e iniciar sesión con las credenciales configuradas, el usuario podrá ver una ventana como la de la figura \ref{fig:ubuntu-init}.
-            \begin{figure}[!htbp]
-                \centering
-                \includegraphics[scale=0.4]{img/ubuntu-init.png}
-                \caption{Ventana de inicio de Ubuntu}
-                \label{fig:ubuntu-init}
-            \end{figure}
 
         \subsection{Instalación de pfSense}
             
@@ -184,48 +130,18 @@
             Cuando la descarga se complete, se descomprimirá el archivo para obtener uno con terminación \texttt{.iso}. Se añadirá una máquina nueva mediante la ruta \texttt{Machine > New}, el tipo de máquina es \texttt{BSD}, y la versión \texttt{FreeBSD (64-bit)}. Pueden no modificarse los valores por defecto, pero aquí se puede reducir el espacio máximo que necesite la VM, nosotros hemos optado por valores en el rango de 3 a 7 GB.
 
             Antes de seguir con los siguientes paso modificaremos la conexión que tendrá esta computadora al acceder por la ruta \texttt{Settings > Network > Adapter 1}. Lo modificaremos de NAT a \texttt{Bridged Adapter} como se ve en la figura \ref{fig:pfsense-bridged-adapter}.
-            \begin{figure}
-                \centering
-                \includegraphics[scale=0.3]{img/pfsense-bridged-adapter.png}
-                \caption{Modificación a red Bridged en Router}
-                \label{fig:pfsense-bridged-adapter}
-            \end{figure}
 
             Se cargará ahora el archivo \texttt{.iso} descargado mediante la ruta \texttt{Settings > Storage > Controller: IDE > Empty}, en el ícono de disco azul que aparece en la figura \ref{fig:pfsense-iso-load} se podrá cargar dicho archivo \texttt{.iso}.
-            \begin{figure}
-                \centering
-                \includegraphics[scale=0.3]{img/pfsense-iso-load.png}
-                \caption{Carga de archivo .iso}
-                \label{fig:pfsense-iso-load}
-            \end{figure}
 
             Se arrancará la VM para iniciar el proceso de instalación. Comenzamos por dar \texttt{Accept} a la pantalla de inicio, después se dará \texttt{OK} para proceder con la instalación, recalcamos que debe de estar seleccionada la opción \texttt{Install}. Los valores por defecto no serán modificados, pero se recomienda después escoger la opción \texttt{Auto (UFS) BIOS option}, cuando termine el proceso de instalación se seleccionará la opción \texttt{NO} para seleccionar después \texttt{Reboot}, en cuando reinicie el sistema, presionar la tecla \texttt{ESC} y apagar la máquina virtual.
 
             Ahora se expulsará el archivo \texttt{.iso} que se cargó con anterioridad en la ruta \texttt{Settings > Storage > Controller: IDE}, seleccionar el archivo que ahora se verá en esa pantalla, y hacer click en \texttt{Remove attachment}. Hecho esto, se irá a la sección \texttt{Network}, para crear una red interna que compartirán las demás máquinas virtuales, se seleccionará y habilitará el adaptador 2 en modo de conexión interna, el nombre de la red queda a criterio del usuario. Se debe de tener una configuración como la de la figura \ref{fig:pfsense-internal}.
-            \begin{figure}[!htbp]
-                \centering
-                \includegraphics[scale=0.3]{img/pfsense-internal.png}
-                \caption{Creación de red interna}
-                \label{fig:pfsense-internal}
-            \end{figure}
 
             Iniciar ahora la máquina virtual, este proceso tomará algo de tiempo, pero se debe de llegar a una ventana como la de la figura \ref{fig:pfsense-init}. \textbf{No apagar la máquina virtual ahora}.
-            \begin{figure}[!htbp]
-                \centering
-                \includegraphics[scale=0.3]{img/pfsense-init.png}
-                \caption{Ventana de inicio de pfSense}
-                \label{fig:pfsense-init}
-            \end{figure}
         
         \subsection{Configuración de redes}
 
             Para cada una de las máquinas virtuales previamente instaladas, a excepción del router, acceder a la configuración de la red por la ruta \texttt{Settings > Network > Adapter 1}, modificar sus valores para que la red a utilizar sea la red interna previamente creada, debe de quedar un resultado como el de la figura \ref{fig:all-internal}.
-            \begin{figure}[!htbp]
-                \centering
-                \includegraphics[scale=0.25]{img/all-internal.png}
-                \caption{Configuración de red interna}
-                \label{fig:all-internal}
-            \end{figure}
 
         \subsection{Configuración del router} \label{sec:router-config}
 
@@ -238,20 +154,8 @@
             \end{itemize}
 
             Se verá ahora una ventana como la de la figura \ref{fig:pfsense-config-init}. Proceda con el proceso de instalación sin modificar los valores por defecto. Al terminar seleccione el botón de aplicar cambios.
-            \begin{figure}[!htbp]
-                \centering
-                \includegraphics[scale=0.3]{img/pfsense-config-init.png}
-                \caption{Ventana inicial de configuración del router}
-                \label{fig:pfsense-config-init}
-            \end{figure}
 
             Cuando se termine este proceso, el router habrá sido configurado, puede comprobar en cada una de las máquinas que exista una conexión a internet; un ejemplo de este resultado puede observarse en la figura \ref{fig:all-internet}.
-            \begin{figure}[!htbp]
-                \centering
-                \includegraphics[scale=0.3]{img/all-internet.png}
-                \caption{Conexión a internet exitosa}
-                \label{fig:all-internet}
-            \end{figure}
 
     \section{Notas}
 
@@ -261,6 +165,120 @@
             \item Fallo en resolución de nombres al usar comando ping: Al seguir con los valores por defecto de la configuración de \texttt{pfSense} podría presentarse el caso de que el \texttt{DNS Resolver} de fábrica no logre brindar una conexión de internet a las máquinas virtuales, para resolver este problema será necesario hacer un \texttt{reset} del router para configurar un \texttt{DNS Resolver} funcional, la guía descrita en el siguiente \href{https://coygeek.com/docs/pfsense-virtualbox/}{link} provee pasos detallados sobre las modificaciones que deben hacerse en la configuración del router que describimos en la sección \ref{sec:router-config}
         \end{itemize}
     
+    \section{Imágenes}
+
+        \begin{figure}[!htbp]
+            \centering
+            \includegraphics[scale=0.25]{img/virtual-box.png}
+            \caption{Ventana de bienvenida de VirtualBox}
+            \label{fig:fresh-vbox}
+        \end{figure}
+
+        \begin{figure}[!htbp]
+            \centering
+            \includegraphics[scale=0.25]{img/kali-screen.png}
+            \caption{Ventana de inicio de Kali}
+            \label{fig:kali-init}
+        \end{figure}
+
+        \begin{figure}[!htbp]
+            \centering
+            \includegraphics[scale=0.3]{img/win-download.png}
+            \caption{Descarga de máquina virtual con Windows 10}
+            \label{fig:windows-download}
+        \end{figure}
+
+        \begin{figure}[!htbp]
+            \centering
+            \includegraphics[scale=0.2]{img/windows-init.png}
+            \caption{Pantalla de inicio de Windows}
+            \label{fig:windows-init}
+        \end{figure}
+
+        \begin{figure}[!htbp]
+            \centering
+            \includegraphics[scale=0.2]{img/meta-download.png}
+            \caption{Archivos descargados de Metasploitable}
+            \label{fig:meta-download}
+        \end{figure}
+
+        \begin{figure}[!htbp]
+            \centering
+            \includegraphics[scale=0.25]{img/meta-create.png}
+            \caption{Creación de máquina virtual Metasploitable}
+            \label{fig:meta-create}
+        \end{figure}
+
+        \begin{figure}[!htbp]
+            \centering
+            \includegraphics[scale=0.3]{img/meta-init.png}
+            \caption{Ventana de inicio de Metasploitable}
+            \label{fig:meta-init}
+        \end{figure}
+
+        \begin{figure}[!htbp]
+            \centering
+            \includegraphics[scale=0.4]{img/ubuntu-install.png}
+            \caption{Carga de archivo de instalación .iso de Ubuntu}
+            \label{fig:ubuntu-iso-load}
+        \end{figure}
+
+        \begin{figure}[!htbp]
+            \centering
+            \includegraphics[scale=0.4]{img/ubuntu-init.png}
+            \caption{Ventana de inicio de Ubuntu}
+            \label{fig:ubuntu-init}
+        \end{figure}
+
+        \begin{figure}[!htbp]
+            \centering
+            \includegraphics[scale=0.3]{img/pfsense-bridged-adapter.png}
+            \caption{Modificación a red Bridged en Router}
+            \label{fig:pfsense-bridged-adapter}
+        \end{figure}
+
+        \begin{figure}[!htbp]
+            \centering
+            \includegraphics[scale=0.3]{img/pfsense-iso-load.png}
+            \caption{Carga de archivo .iso}
+            \label{fig:pfsense-iso-load}
+        \end{figure}
+
+        \begin{figure}[!htbp]
+            \centering
+            \includegraphics[scale=0.3]{img/pfsense-internal.png}
+            \caption{Creación de red interna}
+            \label{fig:pfsense-internal}
+        \end{figure}
+
+        \begin{figure}[!htbp]
+            \centering
+            \includegraphics[scale=0.3]{img/pfsense-init.png}
+            \caption{Ventana de inicio de pfSense}
+            \label{fig:pfsense-init}
+        \end{figure}
+
+        \begin{figure}[!htbp]
+            \centering
+            \includegraphics[scale=0.25]{img/all-internal.png}
+            \caption{Configuración de red interna}
+            \label{fig:all-internal}
+        \end{figure}
+
+        \begin{figure}[!htbp]
+            \centering
+            \includegraphics[scale=0.3]{img/pfsense-config-init.png}
+            \caption{Ventana inicial de configuración del router}
+            \label{fig:pfsense-config-init}
+        \end{figure}
+
+        \begin{figure}[!htbp]
+            \centering
+            \includegraphics[scale=0.3]{img/all-internet.png}
+            \caption{Conexión a internet exitosa}
+            \label{fig:all-internet}
+        \end{figure}
+        
     \clearpage
     \bibliographystyle{IEEEtran}
     \bibliography{references.bib}
