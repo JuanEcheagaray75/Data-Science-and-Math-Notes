@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[]{amsthm}
+\usepackage{amsmath}
+\usepackage[]{amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage[letterpaper, margin=1.5in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\decimalpoint
+
+\begin{document}
+    \begin{titlepage}
+        \begin{center}
+            \begin{figure}
+                \centering
+                \includegraphics[scale=0.13]{img/logo_itesm.png}\\ % Logo de la institución
+            \end{figure}
+        \vspace{5cm}
+        \LARGE{Instituto Tecnológico y de Estudios Superiores de Monterrey}\\
+        \fontsize{12}{14}\selectfont
+        \vspace{1cm}
+        \textbf{Actividad 3.1.2.1 Conocimiento de herramientas usadas en pentesting. }\\ % Nombre de la tarea
+        \vspace{0.7cm}
+        \begin{table}[h!]
+            \centering
+            \begin{tabular}{ ||c|c|| }
+                \hline
+                Nombre & Matrícula \\
+                \hline
+                Juan Pablo Echeagaray González & A00830646 \\
+                \hline
+                Verónica Victoria García De la Fuente & A00830383 \\
+                \hline
+                Emmanuel Isaí Godínez Flores & A01612966 \\
+                \hline
+                Carlos David Lozano Sanguino & A01275316 \\
+                \hline
+                Emily Rebeca Méndez Cruz & A00830768 \\
+                \hline
+                Eugenio Santisteban Zolezzi & A01720932 \\
+                \hline
+            \end{tabular}
+        \end{table}
+        \vspace{0.7cm}
+        Aplicación de criptografía y seguridad\\ % Materia
+        \vspace{0.2cm}
+        MA2005B.201\\ % Clave de la materia
+        \vspace{0.2cm}
+        Dr. Alberto Francisco Martínez Herrera\\ % Nombre del profesor
+        \vspace{0.2cm}
+        Dr. Oscar Eduardo Labrado Gómez \\
+        \vspace{0.7cm}
+        03 de octubre del 20222\\ % Fecha de entrega
+        \end{center}
+    \end{titlepage}
+
+    \section{Hack The Box}
+            
+        \emph{Hack The Box} fue fundado por Haris Pylarinos en 2017, ya que Pylarinos se dio cuenta que la forma más productiva de desarrollar habilidades de ciberseguridad era a través de la práctica, en lugar de aprender la teoría leyendo libros \cite{novick_2019}. Esta plataforma se especializa en el uso de "piratería ética" para entrenar técnicas de ciberseguridad. Los usuarios enfrentan desafíos para atacar laboratorios virtuales vulnerables en un entorno simulado, gamificado y de prueba \cite{butcher_2021}.
+        
+        Al aplicar la mecánica del juego en la plataforma, Pylarinos desarrolló un entorno de entrenamiento donde las personas entusiastas de la ciberseguridad practiquen sus habilidades. Cada semana, \emph{Hack The Box} crea una nueva máquina virtual para que los jugadores entren; en esta dinámica se le otorgan puntos a los jugadores que tengan intentos exitosos de piratería y un lugar en la tabla de clasificación mundial. La plataforma tiene oportunidades para aspirantes a hackers de todos los niveles de dificultad, algunos de los desafíos más difíciles pueden llegar a tardar días en completarse \cite{novick_2019}.
+        
+        "Hack The Box es un campo de juegos de piratería masivo y una comunidad de seguridad de la información de más de 1,2 millones de miembros de la plataforma que aprenden, piratean, juegan, intercambian ideas y metodologías", es la definición que se puede encontrar en la página web de Hack The Box, puede ver más información acerca de esto en este \href{https://www.hackthebox.com/about-us}{enlace} \cite{hack}.
+        
+        Este enfoque ha atraído a más de 1.2 millones de miembros a la plataforma, desde principiantes hasta expertos, cuenta con más de 450 laboratorios de hackeo, también con más de 1.4 miles de organizaciones, que buscan mejorar su conocimiento acerca de los ciberadversarios, y más de 150 de CTFs (Capture The Flag) junto con otros eventos \cite{hack}.
+
+        Un atractivo nuevo a este sitio es la posibilidad de obtener una certificación de \emph{pentesting}. La plataforma ahora ofrece la certificación \emph{HTB Certified Penetration Testing Specialist}, la cual tiene como objetivo desarrollar competencias técnicas de hackeo ético y \emph{pentesting} a un nivel intermedio, se espera que al obtener la certificación el alumno pueda detectar problemas de seguridad así como sus medios de explotación respectivos, que no serían sencillos de aplicar buscando directamente CVEs \cite{htb-cert-info}. La empresa destaca también que el poseer las habilidades técnicas no será suficiente para obtener la certificación, sino que se tienen que desarrollar las habilidades de comunicación necesarias para transmitir los descubrimientos hechos, en particular, uno de los medios de evaluación es que el alumno pueda escribir un reporte técnico de alta calidad que documente el procedimiento realizado así como las vulnerabilidades identificadas.
+        
+        Algunas de las áreas en las que se enfoca la certificación son \cite{htb-cert-info}:
+        \begin{itemize}
+            \item Técnicas de pentesting
+            \item Técnicas de recopilación de información
+            \item Ataques a sistemas Windows y Linux
+            \item Ataques al Active Directory
+            \item Pentesting para aplicaciones web
+            \item Escalamiento de privilegios para Windows y Linux
+            \item Comunicación de riesgos y vulnerabilidades
+        \end{itemize}
+    
+    \clearpage
+    \bibliographystyle{IEEEtran}
+    \bibliography{references.bib}
+
+\end{document}
