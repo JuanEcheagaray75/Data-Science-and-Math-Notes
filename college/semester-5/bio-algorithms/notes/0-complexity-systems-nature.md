@@ -1,5 +1,9 @@
 # Complexity and Systems Based in Nature
 
+- [Complexity and Systems Based in Nature](#complexity-and-systems-based-in-nature)
+  - [Properties of the solutions](#properties-of-the-solutions)
+  - [Complexity](#complexity)
+
 We generally would like to solve an optimization problem, the first step is to model it, usually through the aide of mathematics. Once the researcher has a mathematical model to optimiza, he often must decide between 3 avenues:
 
 1. **Exact methods**: analytical solutions to an optimization problem, the quality of the answer is guaranteed to be optimal, but the problem itself might become intractable, making these methods practically impossible to use in some scenarios
@@ -12,10 +16,10 @@ We generally would like to solve an optimization problem, the first step is to m
 
 ## Properties of the solutions
 
-- Intensification (exploitation):
+- **Intensification**(exploitation):
   - Makes reference to how much we value the quality of the solution throughout the optimization process
   - They focus the search on promising areas of the search space
-- Diversification (exploration):
+- **Diversification** (exploration):
   - Makes reference to how much we value finding different solutions throughout the optimization process
   - It encourages useful exploration of the broader search space
 
